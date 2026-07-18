@@ -1,0 +1,5 @@
+.capacity,.transition{display:inline-flex;width:max-content;border-radius:20px;padding:5px 9px;font-size:.67rem;font-weight:850;background:#e9ece9;color:#53615f}
+.capacity--coordinated,.transition--partial{background:#f3e8cd;color:#735316}
+.capacity--complex,.transition--not_ready{background:#f3ddda;color:#893d39}
+.capacity--standard,.transition--ready{background:#dceee2;color:#326344}
+.operational-note{font-size:.74rem;line-height:1.55;color:var(--muted);margin:12px 0 0}
