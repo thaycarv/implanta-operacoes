@@ -1,4 +1,4 @@
-import { createInitialState, loadState, portfolioReducer, STORAGE_KEY } from '../state/portfolio'
+import { createInitialState, loadState, persistState, portfolioReducer, STORAGE_KEY } from '../state/portfolio'
 import type { ProjectProfile } from '../types'
 
 const profile: ProjectProfile = {
@@ -8,6 +8,13 @@ const profile: ProjectProfile = {
 }
 
 describe('Portfolio state', () => {
+  it('keeps the application running when storage rejects a write', () => {
+    const state = createInitialState(new Date('2026-07-17T12:00:00.000Z'))
+    const storage = { setItem: () => { throw new Error('Quota exceeded') } }
+
+    expect(persistState(state, storage)).toBe(false)
+  })
+
   it('adds a visitor project and generates its requirements', () => {
     const initial = createInitialState(new Date('2026-07-17T12:00:00.000Z'))
     const state = portfolioReducer(initial, { type: 'project/add', profile })

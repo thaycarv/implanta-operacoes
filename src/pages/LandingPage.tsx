@@ -36,7 +36,7 @@ export function LandingPage() {
         <section className="hero container">
           <div className="hero__content">
             <p className="eyebrow">Projeto autoral de Implantação, Projetos e Customer Success</p>
-            <h1>Da necessidade do cliente ao primeiro valor em produção.</h1>
+            <h1>Da necessidade do cliente ao primeiro ciclo operacional validado.</h1>
             <p className="hero__lead">Um protótipo funcional para acompanhar projetos de software entre handoff, discovery, requisitos, desenvolvimento, homologação, go-live e validação do primeiro ciclo operacional.</p>
             <div className="hero__actions">
               <Link className="button button--primary" to="/app/dashboard">Explorar o protótipo <ArrowRight size={17} /></Link>

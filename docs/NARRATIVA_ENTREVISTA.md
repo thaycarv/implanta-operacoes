@@ -2,7 +2,7 @@
 
 ## Versão curta
 
-“O IMPLANTA é um protótipo de gestão de implantações de software que acompanha a jornada do handoff comercial até o primeiro valor do cliente. Eu parti de um problema que conheço da operação: o projeto pode avançar entre várias áreas e até entrar em produção sem existir uma visão integrada de requisitos, bloqueios, responsabilidades e valor comprovado.
+“O IMPLANTA é um protótipo de gestão de implantações de software que acompanha a jornada do handoff comercial até o primeiro ciclo operacional validado. Eu parti de um problema que conheço da operação: o projeto pode avançar entre várias áreas e até entrar em produção sem existir uma visão integrada de requisitos, bloqueios, responsabilidades e operação comprovada.
 
 Modelei nove fases, criei oito cenários simulados e conectei dashboard, DRN, QA, homologação, mudanças de escopo e portal do cliente. Uma decisão importante foi não usar um percentual único de progresso. O projeto mostra fase, condição operacional, cobertura de requisitos, marcos e gates.
 
@@ -20,7 +20,7 @@ Criar um modelo que integrasse a jornada sem simplificar indevidamente o process
 
 ### Ação
 
-- defini o primeiro valor antes de desenhar as telas;
+- defini os critérios do ciclo operacional antes de desenhar as telas;
 - modelei fases, gates, exceções e responsabilidades;
 - conectei necessidade, requisito, entrega, teste e homologação;
 - criei cenários com riscos de origens diferentes;
@@ -37,9 +37,9 @@ Uma aplicação com seis visões, oito projetos simulados, três roteiros guiado
 
 Porque percentuais podem misturar entregas de relevâncias diferentes. Um projeto com muitas tarefas simples concluídas ainda pode ter um requisito fiscal crítico em aberto. Preferi combinar fase, cobertura de requisitos, marcos e gates.
 
-### Por que separar go-live de primeiro valor?
+### Por que separar go-live de ciclo operacional validado?
 
-Porque colocar o sistema em produção não garante que o cliente conseguiu operar com sucesso. O primeiro valor exige venda, estoque, caixa e dados reconciliados no ciclo real.
+Porque colocar o sistema em produção não garante que o cliente conseguiu operar com sucesso. A validação operacional exige venda, estoque, caixa e dados reconciliados no ciclo real.
 
 ### A plataforma toma decisões automaticamente?
 

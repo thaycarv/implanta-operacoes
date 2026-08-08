@@ -12,7 +12,7 @@ Validar se o protótipo sustenta decisões reais de implantação sem reduzir a 
 | 2 | Mudança com impacto isolado | Uma decisão deve alterar apenas o projeto afetado | Aprovação de mudança na Casa Norte preserva integralmente os demais projetos | Aprovado |
 | 3 | Divergência durante a entrega | Divergência de requisito não pode ser tratada automaticamente como defeito ou novo escopo | Mercado Viva classifica o ajuste como `requirement_divergence` antes da decisão | Aprovado |
 | 4 | Falha crítica próxima ao go-live | Pendência crítica deve impedir a liberação operacional | Lojas Horizonte permanece com gate de go-live não liberado por falha fiscal | Aprovado |
-| 5 | Go-live executado sem valor comprovado | Entrada em produção não equivale a primeiro valor | Rede Aurora concluiu o go-live, mas continua bloqueada por divergência na conciliação do caixa | Aprovado |
+| 5 | Go-live executado sem operação validada | Entrada em produção não equivale a ciclo operacional validado | Rede Aurora concluiu o go-live, mas continua bloqueada por divergência na conciliação do caixa | Aprovado |
 | 6 | Carteira com esforços distintos | Capacidade deve considerar o perfil do projeto, sem percentual genérico | Projetos são classificados como Padrão, Coordenação moderada ou Alta coordenação por regras explícitas | Aprovado após ajuste |
 | 7 | Divergência originada no comercial | A origem do problema deve permanecer visível | Casa Norte registra divergência entre proposta e discovery com origem Comercial | Aprovado após ajuste |
 | 8 | Dependência do cliente | Atraso do cliente não deve ser atribuído ao time interno | Empório Central fica em atenção e mantém a dependência associada ao Cliente | Aprovado |
@@ -34,9 +34,9 @@ A classe não representa dificuldade técnica absoluta. Ela sinaliza esforço de
 
 Foram definidos três resultados:
 
-- **Não recomendada:** primeiro valor não validado ou pendência crítica aberta.
-- **Transição parcial:** primeiro valor validado, com pendências residuais não críticas e responsáveis explícitos.
-- **Transição completa:** primeiro valor validado e nenhuma pendência aberta.
+- **Não recomendada:** ciclo operacional não validado ou pendência crítica aberta.
+- **Transição parcial:** ciclo operacional validado, com pendências residuais não críticas e responsáveis explícitos.
+- **Transição completa:** ciclo operacional validado e nenhuma pendência aberta.
 
 ### 3. Rastreabilidade do handoff comercial
 

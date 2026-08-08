@@ -32,7 +32,7 @@ describe('Implanta business rules', () => {
     expect(result.reasons.join(' ')).toMatch(/pendência crítica/i)
   })
 
-  it('does not confuse go-live with first value', () => {
+  it('does not confuse go-live with a validated operational cycle', () => {
     const result = evaluateFirstValueGate(bySlug('rede-aurora'))
     expect(result.ready).toBe(false)
     expect(result.reasons.join(' ')).toMatch(/conciliados/i)

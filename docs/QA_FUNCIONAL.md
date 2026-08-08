@@ -16,8 +16,8 @@
 - [x] QA interno e UAT permanecem separados.
 - [x] Mudanças de escopo preservam classificação e impacto.
 - [x] Dependências preservam origem e responsável.
-- [x] Primeiro valor é diferente de go-live.
-- [x] Transição para Customer Success considera primeiro valor e pendências residuais.
+- [x] Ciclo operacional validado é diferente de go-live.
+- [x] Transição para Customer Success considera o ciclo validado e as pendências residuais.
 - [x] Capacidade da carteira é classificada por regras observáveis.
 
 ## Persistência e recuperação

@@ -10,7 +10,7 @@ Como oferecer uma visão integrada da implantação sem transformar um processo 
 
 ## Hipótese
 
-Uma plataforma que conecte fase, condição operacional, dependências, requisitos, testes, marcos e primeiro valor pode melhorar a qualidade do acompanhamento e tornar decisões de avanço mais rastreáveis.
+Uma plataforma que conecte fase, condição operacional, dependências, requisitos, testes, marcos e ciclo operacional validado pode melhorar a qualidade do acompanhamento e tornar decisões de avanço mais rastreáveis.
 
 ## Solução prototipada
 
@@ -20,7 +20,7 @@ O sistema deriva alertas e gates a partir de regras explícitas, mas mantém a d
 
 ## Processo de desenvolvimento
 
-1. Definição do problema e do primeiro valor.
+1. Definição do problema e dos critérios de validação operacional.
 2. Modelagem da jornada e das responsabilidades.
 3. Definição de criticidade, exceções e regras de avanço.
 4. Construção de oito cenários simulados.
@@ -34,7 +34,7 @@ O sistema deriva alertas e gates a partir de regras explícitas, mas mantém a d
 - Substituição do percentual único por múltiplas evidências de progresso.
 - Separação entre QA interno e homologação do cliente.
 - Distinção entre defeito, divergência, mudança de escopo, melhoria futura e configuração pendente.
-- Separação entre go-live e primeiro valor.
+- Separação entre go-live e ciclo operacional validado.
 - Transição parcial para CS quando existem apenas pendências não críticas com responsáveis definidos.
 - Classificação do esforço de coordenação por características do projeto.
 

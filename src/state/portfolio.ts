@@ -118,6 +118,11 @@ export function loadState(storage: Pick<Storage, 'getItem'> = localStorage): Por
   }
 }
 
-export function persistState(state: PortfolioState, storage: Pick<Storage, 'setItem'> = localStorage): void {
-  storage.setItem(STORAGE_KEY, JSON.stringify(state))
+export function persistState(state: PortfolioState, storage: Pick<Storage, 'setItem'> = localStorage): boolean {
+  try {
+    storage.setItem(STORAGE_KEY, JSON.stringify(state))
+    return true
+  } catch {
+    return false
+  }
 }

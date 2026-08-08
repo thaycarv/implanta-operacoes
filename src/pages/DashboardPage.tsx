@@ -15,7 +15,7 @@ export function DashboardPage() {
 
   return <div className="page">
     <header className="page__header">
-      <div><p className="eyebrow">Carteira simulada</p><h1>Visão geral da carteira</h1><p>Decisões operacionais do requisito ao primeiro valor.</p></div>
+      <div><p className="eyebrow">Carteira simulada</p><h1>Visão geral da carteira</h1><p>Decisões operacionais do requisito ao ciclo operacional validado.</p></div>
       <div className="page__actions"><button className="button button--secondary" onClick={reset}><RotateCcw size={16}/> Restaurar dados</button><Link className="button button--primary" to="/app/implantacoes/nova"><Plus size={16}/> Nova implantação</Link></div>
     </header>
 
@@ -23,7 +23,7 @@ export function DashboardPage() {
       <article className="metric"><Users/><span>Implantações ativas</span><strong>{indicators.activeProjects}</strong><small>{state.projects.length} projetos na carteira</small></article>
       <article className="metric metric--danger"><ShieldAlert/><span>Bloqueadas</span><strong>{indicators.blockedProjects}</strong><small>Exigem decisão para avançar</small></article>
       <article className="metric metric--warning"><CalendarClock/><span>Go-lives próximos</span><strong>{indicators.upcomingGoLives}</strong><small>Previsão nos próximos 15 dias</small></article>
-      <article className="metric metric--success"><CircleCheck/><span>Primeiro valor</span><strong>{indicators.firstValueValidated}</strong><small>Ciclos operacionais validados</small></article>
+      <article className="metric metric--success"><CircleCheck/><span>Ciclos validados</span><strong>{indicators.firstValueValidated}</strong><small>Ciclos operacionais concluídos</small></article>
     </section>
 
     <div className="dashboard-grid">

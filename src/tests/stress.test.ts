@@ -40,7 +40,7 @@ describe('Nove testes de estresse do IMPLANTA', () => {
     expect(gate.reasons).toContain('Existe pendência crítica aberta')
   })
 
-  it('5. não confunde go-live executado com primeiro valor validado', () => {
+  it('5. não confunde go-live executado com ciclo operacional validado', () => {
     const project = bySlug('rede-aurora')
     expect(project.milestones.find(item => item.phase === 'go_live')?.status).toBe('completed')
     expect(isFirstValueValidated(project)).toBe(false)

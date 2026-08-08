@@ -22,6 +22,17 @@ export function ClientPortalPage() {
     state.projects.find(item => item.id === requestedProjectId) ??
     state.projects[0]
 
+  if (!project) {
+    return (
+      <div className="page">
+        <section className="panel no-results" role="status">
+          <h1>Nenhuma implantação disponível</h1>
+          <p>Crie uma implantação ou restaure os dados de demonstração para acessar o Portal do Cliente.</p>
+        </section>
+      </div>
+    )
+  }
+
   const clientItems = project.pendingItems.filter(
     item =>
       item.status === 'open' &&
@@ -109,7 +120,7 @@ export function ClientPortalPage() {
                 ? new Date(
                     `${next.forecastDate}T12:00:00`,
                   ).toLocaleDateString('pt-BR')
-                : 'Primeiro valor validado'}
+                : 'Ciclo operacional validado'}
             </small>
           </article>
 
@@ -171,8 +182,8 @@ export function ClientPortalPage() {
           <section className="panel">
             <div className="panel__head">
               <div>
-                <h2>Primeiro valor</h2>
-                <p>Quando a operação passa a gerar resultado</p>
+                <h2>Ciclo operacional</h2>
+                <p>Confirmação do funcionamento da operação em produção</p>
               </div>
             </div>
 

@@ -48,7 +48,7 @@ export function AppShell() {
             <RotateCcw size={16} aria-hidden="true" />
             Restaurar dados
           </button>
-          <p>Do requisito ao primeiro valor.</p>
+          <p>Do requisito ao ciclo operacional validado.</p>
         </div>
       </aside>
       <main className="workspace"><Outlet /></main>

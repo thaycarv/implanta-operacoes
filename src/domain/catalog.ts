@@ -9,7 +9,7 @@ export const phases: Array<{ id: PhaseId; label: string; shortLabel: string; ina
   { id: 'internal_qa', label: 'Validação interna e QA', shortLabel: 'QA interno', inactivityDays: 2 },
   { id: 'client_validation', label: 'Homologação com o cliente', shortLabel: 'Homologação', inactivityDays: 2 },
   { id: 'go_live', label: 'Preparação e go-live', shortLabel: 'Go-live', inactivityDays: 1 },
-  { id: 'first_value', label: 'Primeiro ciclo operacional e transição', shortLabel: 'Primeiro valor', inactivityDays: 1 },
+  { id: 'first_value', label: 'Ciclo operacional e transição', shortLabel: 'Ciclo validado', inactivityDays: 1 },
 ]
 
 export const conditionLabels: Record<OperationalCondition, string> = {
