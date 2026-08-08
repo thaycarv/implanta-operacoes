@@ -1,7 +1,5 @@
 # IMPLANTA — Gestão de implantações orientada a valor
 
-![Capa do projeto IMPLANTA](public/implanta-cover.svg)
-
 Protótipo funcional de uma plataforma para acompanhar implantações de software do handoff comercial à validação do primeiro ciclo operacional.
 
 **Demo:** [thaycarv.github.io/implanta-operacoes](https://thaycarv.github.io/implanta-operacoes/)
@@ -164,7 +162,7 @@ A publicação em GitHub Pages executa instalação limpa, testes e build antes 
 
 ## Evolução recente
 
-O Portal do Cliente passou a ler o parâmetro `project` da URL. Com isso, cada etapa da demonstração guiada abre o cliente correto — inclusive a Rede Prisma — e a troca em “Visualizar como” mantém a URL sincronizada.
+O Portal do Cliente passou a ler o parâmetro `project` da URL. Com isso, cada etapa da demonstração guiada abre o cliente correto, inclusive a Rede Prisma, e a troca em “Visualizar como” mantém a URL sincronizada.
 
 A revisão técnica também tornou a persistência tolerante a falhas do navegador, adicionou um estado vazio ao Portal do Cliente, fixou as versões das dependências e incluiu testes de integração para os links de cliente dos roteiros guiados. O seletor de implantação compartilhado foi extraído para um componente reutilizável.
 
