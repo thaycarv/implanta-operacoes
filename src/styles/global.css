@@ -12,3 +12,177 @@
 @media(max-width:900px){.split-view,.client-grid{grid-template-columns:1fr}.test-summary{align-items:stretch;flex-wrap:wrap}.test-summary nav{margin-left:0}.client-cards{grid-template-columns:1fr}}
 @media(max-width:620px){.test-grid,.change-form,.trace-chain{grid-template-columns:1fr}.status-control{grid-template-columns:1fr}.impact-flow{align-items:flex-start;flex-direction:column}.client-top{height:auto;padding-block:15px;align-items:flex-start;gap:12px}.client-top>div,.client-top label{align-items:flex-start;flex-direction:column}.client-welcome{align-items:flex-start;flex-direction:column}}
 .sidebar__guide{margin-bottom:14px}.guide{position:fixed;z-index:30;right:18px;top:18px;width:min(370px,calc(100vw - 36px));max-height:calc(100vh - 36px);overflow:auto;background:var(--surface);border:1px solid var(--line);border-radius:17px;box-shadow:0 22px 70px rgba(20,48,46,.25)}.guide>header{position:sticky;top:0;z-index:1;background:var(--petrol-900);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border-radius:16px 16px 0 0}.guide>header span{display:flex;align-items:center;gap:9px;font-size:.8rem;font-weight:850}.guide>header button{border:0;background:transparent;color:#fff;display:grid;place-items:center}.guide__body{padding:20px}.guide__intro,.guide__context{font-size:.79rem;line-height:1.6;color:var(--muted);margin:0 0 17px}.guide__cases{display:grid;gap:9px}.guide__cases>button{border:1px solid var(--line);background:#f5f1e9;border-radius:10px;padding:13px;display:flex;align-items:center;justify-content:space-between;text-align:left;color:var(--ink)}.guide__cases>button:hover{border-color:var(--petrol-700);background:var(--petrol-100)}.guide__cases span{display:grid;gap:4px}.guide__cases b{font-size:.8rem}.guide__cases small{font-size:.67rem;color:var(--muted)}.guide__hint{font-size:.67rem;color:var(--muted);margin:17px 0 0;padding-top:13px;border-top:1px solid var(--line)}.guide__back{border:0;background:transparent;color:var(--petrol-700);font-size:.69rem;font-weight:800;padding:0;margin-bottom:17px}.guide__tag{font-size:.64rem;text-transform:uppercase;letter-spacing:.08em;font-weight:850;color:var(--petrol-700)}.guide h2{font-size:1.15rem;margin:6px 0 10px}.guide__steps{display:grid;margin:18px 0}.guide__steps>div{display:grid;grid-template-columns:27px 1fr;gap:10px;position:relative;padding-bottom:15px}.guide__steps>div:after{content:"";position:absolute;left:13px;top:28px;bottom:0;width:1px;background:var(--line)}.guide__steps>div:last-child:after{display:none}.guide__steps>div>button{z-index:1;width:27px;height:27px;border:0;border-radius:50%;background:#e8e4da;color:var(--ink);display:grid;place-items:center;font-size:.7rem;font-weight:850}.guide__steps>div.is-done>button{background:var(--sage);color:var(--petrol-900)}.guide__steps a{display:grid;gap:5px;background:#f5f1e9;border-radius:9px;padding:10px 12px}.guide__steps a span{font-size:.75rem;font-weight:800}.guide__steps a small{display:flex;align-items:center;color:var(--petrol-700);font-size:.64rem}.guide__footer{border-top:1px solid var(--line);padding-top:14px;display:flex;align-items:center;justify-content:space-between;gap:10px}.guide__footer span{font-size:.64rem;color:var(--muted)}.guide__footer button{border:0;background:transparent;color:var(--petrol-700);font-size:.64rem;font-weight:800;display:flex;align-items:center;gap:5px}
+
+/* Estilos Versão 2.0: Diagnóstico e Abas */
+.detail-top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.scenario-quick-pills {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.scenario-quick-label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.scenario-pill {
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--paper-200);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.15s;
+}
+
+.scenario-pill:hover,
+.scenario-pill.is-active {
+  background: var(--petrol-900);
+  color: #ffffff;
+  border-color: var(--petrol-900);
+}
+
+.diagnostic-card {
+  margin-bottom: 20px;
+  border-left: 4px solid var(--petrol-700);
+  background: #ffffff;
+}
+
+.diagnostic-card--blocked {
+  border-left-color: var(--danger);
+  background: #fffafa;
+}
+
+.diagnostic-card--attention {
+  border-left-color: var(--warning);
+  background: #fffdfa;
+}
+
+.diagnostic-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--petrol-700);
+  margin-bottom: 4px;
+}
+
+.diagnostic-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 14px 0;
+}
+
+.diagnostic-box {
+  background: var(--paper-100);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+
+.diagnostic-box__head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+
+.diagnostic-box ul {
+  margin: 0;
+  padding-left: 16px;
+  font-size: 0.76rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.diagnostic-box li {
+  margin-bottom: 4px;
+}
+
+.diagnostic-action-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--sage);
+  border: 1px solid #c2ded3;
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: var(--petrol-900);
+}
+
+.diagnostic-action-box strong {
+  display: block;
+  font-size: 0.8rem;
+  margin-bottom: 2px;
+}
+
+.diagnostic-action-box p {
+  margin: 0;
+  font-size: 0.76rem;
+  line-height: 1.4;
+}
+
+.detail-tabs {
+  display: flex;
+  gap: 6px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.detail-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border: 0;
+  background: transparent;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.detail-tab:hover {
+  color: var(--ink);
+}
+
+.detail-tab.is-active {
+  color: var(--petrol-900);
+  border-bottom-color: var(--petrol-700);
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.tab-pane {
+  display: grid;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .diagnostic-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
