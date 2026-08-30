@@ -1,0 +1,22 @@
+name: 🐛 [Correção] Relato de Bug / Ajuste
+description: Relatar um erro, quebra de layout ou falha funcional
+title: "[Correção]: "
+labels: ["bug", "correção"]
+body:
+  - type: markdown
+    attributes:
+      value: Obrigado por registrar esta issue para manutenção do Implanta.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Descrição do Problema
+      description: Explique o que está ocorrendo de forma clara e objetiva.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamento Esperado
+      description: O que deveria ocorrer corretamente.
+    validations:
+      required: true

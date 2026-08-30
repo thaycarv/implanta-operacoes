@@ -1,0 +1,19 @@
+name: ⚡ [Melhoria] Aprimoramento de Usabilidade ou Processo
+description: Propor refinamento em componentes existentes, clareza metodológica ou contraste
+title: "[Melhoria]: "
+labels: ["enhancement", "melhoria"]
+body:
+  - type: textarea
+    id: current
+    attributes:
+      label: Situação Atual
+      description: Como a funcionalidade ou processo opera hoje.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposta de Melhoria
+      description: Qual a melhoria sugerida e seu benefício para a gestão/usabilidade.
+    validations:
+      required: true

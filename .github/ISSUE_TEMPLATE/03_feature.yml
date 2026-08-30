@@ -1,0 +1,19 @@
+name: 🚀 [Nova Função] Nova Funcionalidade / Módulo
+description: Propor a criação de uma nova etapa, módulo ou recurso executivo
+title: "[Nova Função]: "
+labels: ["feature", "nova função"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Objetivo da Nova Função
+      description: Qual necessidade de gestão essa funcionalidade atende.
+    validations:
+      required: true
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requisitos e Regras de Negócio
+      description: Detalhe como a nova função deve se comportar.
+    validations:
+      required: true
