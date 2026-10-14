@@ -13,8 +13,8 @@ describe('Implanta business rules', () => {
 
   it('creates the eight coherent seed projects', () => {
     expect(projects).toHaveLength(8)
-    expect(projects.map(project => project.profile.clientName)).toContain('Rede Aurora')
-    expect(projects.map(project => project.profile.clientName)).toContain('Ponto Urbano')
+    expect(projects.map(project => project.profile.clientName)).toContain('Polo Universitário Aurora')
+    expect(projects.map(project => project.profile.clientName)).toContain('Polo Saber Urbano')
   })
 
   it('derives operational conditions from observable evidence', () => {
@@ -55,7 +55,7 @@ describe('Implanta business rules', () => {
     const titles = generateConditionalRequirements(profile, 'test', now).map(item => item.title)
     expect(titles).toContain('Validar múltiplas unidades')
     expect(titles).toContain('Conferir dados migrados')
-    expect(titles).toContain('Homologar integração de pagamentos')
+    expect(titles).toContain('Homologar integração de sistemas e portais')
     expect(titles).toContain('Aprovar especificação da customização')
   })
 })
