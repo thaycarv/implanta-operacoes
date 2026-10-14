@@ -26,8 +26,8 @@ describe('Implanta foundation', () => {
     )
 
     const expectedNames: Record<string, string> = {
-      'project-1': 'Rede Aurora',
-      'project-2': 'Rede Prisma',
+      'project-1': 'Polo Universitário Aurora',
+      'project-2': 'Rede Saber Digital',
     }
     expect(screen.getByRole('heading', { name: `Olá, ${expectedNames[projectId]}` })).toBeInTheDocument()
   })

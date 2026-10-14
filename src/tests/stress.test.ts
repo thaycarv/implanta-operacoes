@@ -66,7 +66,7 @@ describe('Nove testes de estresse do IMPLANTA', () => {
   it('9. permite transição parcial para CS com pendência não crítica explícita', () => {
     const transition = evaluateCSTransition(bySlug('rede-prisma'))
     expect(transition.status).toBe('partial')
-    expect(transition.reasons[0]).toMatch(/Relatório personalizado pendente/)
+    expect(transition.reasons[0]).toMatch(/Painel pedagógico complementar pendente/)
     expect(evaluateCSTransition(bySlug('ponto-urbano')).status).toBe('ready')
   })
 })
