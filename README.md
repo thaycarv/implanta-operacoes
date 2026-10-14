@@ -1,89 +1,66 @@
-# Implanta: Gestão de Implantações Orientada a Valor
+# Implanta • Gestão de Implantações e Transformação Digital
 
-O **Implanta** é um protótipo funcional para organização e acompanhamento de implantações de software, desde o handoff comercial até a validação do primeiro ciclo operacional e transição para Customer Success.
+O **Implanta** é um cockpit executivo desenvolvido para acompanhar a jornada completa de implantação de projetos em **educação, transformação digital e inovação**. 
 
-Consulte o [Catálogo de Melhorias](MELHORIAS.md) para detalhes da evolução do projeto.
-
----
-
-## 1. O Desafio Operacional
-
-Projetos de implantação frequentemente distribuem informações críticas entre planilhas, mensagens e controles individuais. Essa fragmentação dificulta responder perguntas essenciais:
-
-* Em qual condição operacional o projeto realmente se encontra?
-* Qual é a causa raiz que impede o próximo avanço e de onde vem a dependência?
-* Quais requisitos foram entregues, testados e homologados formalmente?
-* O go-live gerou valor prático ou apenas colocou o sistema em produção?
+O projeto organiza a transição entre o planejamento inicial e a adoção prática no dia a dia, garantindo que novas tecnologias e metodologias não fiquem apenas instaladas, mas gerem valor real para educadores, equipes e gestores.
 
 ---
 
-## 2. A Jornada Modelada
-
-O fluxo de implantação é estruturado em nove etapas integradas:
-
-1. Handoff comercial
-2. Discovery
-3. Requisitos e desenho da solução (DRN)
-4. Refinamento técnico e planejamento
-5. Configuração e desenvolvimento
-6. Validação interna e QA
-7. Homologação com o cliente (UAT)
-8. Preparação e go-live
-9. Primeiro ciclo operacional e transição
-
-O ciclo operacional é considerado validado quando o cliente conclui uma operação com venda processada, estoque atualizado, caixa fechado e dados reconciliados.
+## 🎯 O Desafio das Implantações em Transformação Digital
+A modernização de processos e a introdução de novas ferramentas em redes de ensino, polos de inovação e instituições frequentemente enfrentam gargalos silenciosos:
+* Informações críticas dispersas entre cronogramas paralelos e controles individuais;
+* Falta de visibilidade sobre onde cada equipe ou unidade está travada;
+* Viradas de chave realizadas com pendências técnicas que comprometem a experiência dos usuários;
+* Foco restrito à entrega técnica da ferramenta, sem acompanhamento da adesão das pessoas no primeiro ciclo de uso.
 
 ---
 
-## 3. Principais Recursos da Versão 2.0
+## 🗺️ A Jornada Estruturada em Etapas
+O fluxo de implantação organiza o ciclo de vida do projeto em etapas integradas com critérios claros de entrada e saída:
 
-* **Dashboard da Carteira:** Indicadores consolidados de saúde, fases, bloqueios e go-lives previstos.
-* **Card de Diagnóstico Operacional:** Identificação automática da causa raiz dos bloqueios e recomendação do próximo passo.
-* **Gerador de Status Report:** Exportação estruturada em um clique para atas com clientes e reuniões de alinhamento.
-* **Abas Integradas por Implantação:** Visão 360 graus reunindo requisitos (DRN), testes QA/UAT, mudanças de escopo e portal do cliente em um único local.
-* **Gates de Go-live e Transição:** Critérios determinísticos que condicionam o avanço operacional sem bloquear a exploração do visitante.
-
----
-
-## 4. Cenários Demonstrativos
-
-A carteira conta com implantações simuladas demonstrando diferentes tensões operacionais:
-
-| Cenário | Tensão Operacional |
-| :--- | :--- |
-| **Rede Aurora** | Go-live concluído, porém ciclo operacional bloqueado por divergência crítica de caixa. |
-| **Lojas Horizonte** | Falha fiscal crítica identificada durante a homologação com o cliente (UAT). |
-| **Rede Prisma** | Ciclo operacional validado com pendência não crítica e transição para CS. |
+1. **Alinhamento Inicial:** Definição de escopo, expectativas e marcos de entrega com os responsáveis;
+2. **Diagnóstico e Discovery:** Mapeamento do contexto local, infraestrutura e maturidade digital;
+3. **Desenho da Solução:** Estruturação dos requisitos pedagógicos, técnicos e operacionais;
+4. **Configuração e Integração:** Parametrização de ambientes, migração de dados e testes preliminares;
+5. **Capacitação e Homologação:** Formação das equipes líderes, simulação de rotinas e validação de usabilidade;
+6. **Preparação para o Lançamento:** Verificação de pré-requisitos essenciais e plano de comunicação;
+7. **Primeiro Ciclo de Uso e Sustentação:** Acompanhamento assistido das primeiras semanas de operação real e transição para suporte contínuo.
 
 ---
 
-## 5. Estrutura Técnica
-
-* **Interface:** React 19 + TypeScript + Vite + Lucide Icons;
-* **Navegação:** React Router com HashRouter (compatível com GitHub Pages);
-* **Estado:** Context API e reducer para persistência no LocalStorage;
-* **Qualidade:** Testes unitários com Vitest e React Testing Library.
-
----
-
-## 6. Como Executar Localmente
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/thaycarv/implanta-operacoes.git
-   ```
-2. Instale as dependências:
-   ```bash
-   npm install
-   ```
-3. Inicie o servidor:
-   ```bash
-   npm run dev
-   ```
-4. Acesse no navegador: `http://localhost:5174/implanta-operacoes/`
+## 💡 Recursos Principais
+* **Dashboard da Carteira:** Visão consolidada de todas as unidades e projetos em andamento, com semáforos de saúde e alertas de atraso;
+* **Diagnóstico de Bloqueios:** Identificação rápida da causa raiz dos travamentos (infraestrutura, dados, capacitação ou alinhamento de lideranças);
+* **Status Report Executivo:** Emissão em um clique de relatórios de acompanhamento para comitês e patrocinadores;
+* **Critérios Determinísticos de Liberação:** O avanço para a etapa seguinte só ocorre quando os requisitos essenciais são validados, evitando surpresas no lançamento.
 
 ---
 
-## 7. Créditos
+## 🏫 Cenários Demonstrativos na Carteira
+A plataforma conta com projetos simulados refletindo desafios reais de transformação:
+* **Colégio Horizonte:** Implantação de plataforma de gestão pedagógica com bloqueio temporário em integração de dados acadêmicos;
+* **Polo Inova Edu:** Formação de multiplicadores e salas digitais em fase avançada de homologação com professores;
+* **Rede Saber Digital:** Primeiro ciclo de uso concluído com sucesso e transição para equipe de sustentação.
 
-Projeto autoral desenvolvido por **Thayâne Carvalho**, focado em **Operações, Gestão de Projetos e Implantação de Sistemas**.
+---
+
+## 🛠️ Estrutura Técnica & Execução
+* **Frontend:** React, TypeScript, Vite
+* **Design & Estilo:** CSS modular, Motion Principles com física spring e micro-interações
+* **Governança:** GitFlow com Issues, Branches e Pull Requests (conforme `AGENTS.md`)
+
+```bash
+# Instalar dependências
+npm install
+
+# Iniciar servidor local
+npm run dev
+
+# Gerar build de produção
+npm run build
+```
+
+---
+
+## 👩‍💼 Competências Aplicadas
+Gestão de Projetos e Implantação • Transformação Digital e Inovação • Gestão de Mudança e Adoção • Diagnóstico de Bloqueios e Riscos • Facilitação e Status Report Executivo
