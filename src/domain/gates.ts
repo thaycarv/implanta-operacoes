@@ -14,9 +14,9 @@ export function evaluateGoLiveGate(project: ImplementationProject): GateResult {
 
 export function evaluateFirstValueGate(project: ImplementationProject): GateResult {
   const reasons: string[] = []
-  if (!project.firstValue.saleProcessed) reasons.push('Venda real ainda não validada')
-  if (!project.firstValue.inventoryUpdated) reasons.push('Movimentação de estoque ainda não validada')
-  if (!project.firstValue.cashClosed) reasons.push('Fechamento de caixa ainda não validado')
+  if (!project.firstValue.saleProcessed) reasons.push('Operação inicial ainda não validada')
+  if (!project.firstValue.inventoryUpdated) reasons.push('Fluxo de processos ainda não validado')
+  if (!project.firstValue.cashClosed) reasons.push('Rotina de encerramento ainda não validada')
   if (!project.firstValue.dataReconciled) reasons.push('Dados essenciais ainda não conciliados')
   if (project.pendingItems.some(item => item.status !== 'resolved' && item.severity === 'critical')) reasons.push('Existe pendência crítica aberta')
   return { ready: isFirstValueValidated(project) && reasons.length === 0, reasons }

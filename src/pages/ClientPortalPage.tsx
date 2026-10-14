@@ -3,7 +3,7 @@ import {
   CheckCircle2,
   CircleAlert,
   ExternalLink,
-  Store,
+  Building2,
 } from 'lucide-react'
 import { useSearchParams } from 'react-router-dom'
 import { StatusBadge } from '../components/StatusBadge'
@@ -54,7 +54,7 @@ export function ClientPortalPage() {
       <header className="client-top">
         <div>
           <span className="client-logo">
-            <Store />
+            <Building2 />
             IMPLANTA
           </span>
 
@@ -200,7 +200,7 @@ export function ClientPortalPage() {
 
               <p>
                 {value.ready
-                  ? 'Venda, estoque, caixa e dados foram conciliados.'
+                  ? 'Operação, fluxos e dados essenciais foram homologados e conciliados.'
                   : value.reasons.slice(0, 3).join(' · ')}
               </p>
             </div>

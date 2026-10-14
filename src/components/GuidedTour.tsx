@@ -5,8 +5,8 @@ import { usePortfolio } from '../state/PortfolioContext'
 
 export const guidedTours = [
   {
-    id: 'aurora', title: 'Aurora', tag: 'Valor bloqueado após go-live', projectId: 'project-1',
-    context: 'O sistema entrou em produção, mas uma divergência crítica no caixa impede validar o primeiro ciclo operacional.',
+    id: 'aurora', title: 'Aurora', tag: 'Adoção retida após go-live', projectId: 'project-1',
+    context: 'O sistema entrou em produção, mas uma divergência crítica na conciliação de matrículas e dados acadêmicos impede validar o primeiro ciclo de uso.',
     steps: [
       ['aurora-detail', 'Entenda a condição do projeto', '/app/implantacoes/project-1'],
       ['aurora-tests', 'Verifique o gate e as evidências', '/app/testes?project=project-1'],
@@ -14,17 +14,17 @@ export const guidedTours = [
     ],
   },
   {
-    id: 'horizonte', title: 'Horizonte', tag: 'Falha crítica na UAT', projectId: 'project-3',
-    context: 'A homologação do cliente encontrou uma falha fiscal crítica próxima ao go-live.',
+    id: 'horizonte', title: 'Horizonte', tag: 'Falha crítica na homologação (UAT)', projectId: 'project-3',
+    context: 'A homologação do cliente encontrou uma inconsistência crítica na sincronização do diário de classe próxima ao go-live.',
     steps: [
-      ['horizonte-drn', 'Rastreie o requisito fiscal', '/app/requisitos?project=project-3'],
-      ['horizonte-uat', 'Explore QA e UAT', '/app/testes?project=project-3'],
+      ['horizonte-drn', 'Rastreie o requisito de integração', '/app/requisitos?project=project-3'],
+      ['horizonte-uat', 'Explore QA e homologação', '/app/testes?project=project-3'],
       ['horizonte-detail', 'Veja o impacto na jornada', '/app/implantacoes/project-3'],
     ],
   },
   {
-    id: 'prisma', title: 'Prisma', tag: 'Valor alcançado com pendência', projectId: 'project-2',
-    context: 'O primeiro ciclo operacional foi validado, embora uma entrega não crítica permaneça planejada.',
+    id: 'prisma', title: 'Prisma', tag: 'Adoção alcançada com pendência residual', projectId: 'project-2',
+    context: 'O primeiro ciclo letivo foi validado com êxito, restando apenas um painel pedagógico complementar planejado como melhoria contínua.',
     steps: [
       ['prisma-detail', 'Confirme o ciclo operacional', '/app/implantacoes/project-2'],
       ['prisma-change', 'Analise a melhoria futura', '/app/mudancas?project=project-2'],

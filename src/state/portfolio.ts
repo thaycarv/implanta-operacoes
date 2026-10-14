@@ -2,7 +2,7 @@ import { generateConditionalRequirements } from '../domain/requirements'
 import { buildSeedPortfolio } from '../data/seed'
 import type { ImplementationProject, PortfolioState, ProjectProfile, ScopeChange, TestResult, ViewPerspective } from '../types'
 
-export const STORAGE_KEY = 'implanta.portfolio.v1'
+export const STORAGE_KEY = 'implanta.portfolio.v2'
 
 export type PortfolioAction =
   | { type: 'project/add'; profile: ProjectProfile }
@@ -22,7 +22,7 @@ export type PortfolioAction =
 
 export function createInitialState(now = new Date()): PortfolioState {
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     projects: buildSeedPortfolio(now),
     selectedProjectId: undefined,
     perspective: 'management',
@@ -111,7 +111,7 @@ export function loadState(storage: Pick<Storage, 'getItem'> = localStorage): Por
     const serialized = storage.getItem(STORAGE_KEY)
     if (!serialized) return createInitialState()
     const parsed = JSON.parse(serialized) as PortfolioState
-    if (parsed.schemaVersion !== 1 || !Array.isArray(parsed.projects)) return createInitialState()
+    if (parsed.schemaVersion !== 2 || !Array.isArray(parsed.projects)) return createInitialState()
     return parsed
   } catch {
     return createInitialState()

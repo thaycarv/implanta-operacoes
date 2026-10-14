@@ -8,7 +8,7 @@ import { STORAGE_KEY } from '../state/portfolio'
 describe('Implanta foundation', () => {
   it('presents the project positioning on the landing page', () => {
     render(<MemoryRouter><PortfolioProvider><App /></PortfolioProvider></MemoryRouter>)
-    expect(screen.getByRole('heading', { name: /da necessidade do cliente ao primeiro ciclo operacional validado/i })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /da necessidade do projeto ao primeiro ciclo de adoção validado/i })).toBeInTheDocument()
     expect(screen.getByRole('link', { name: /explorar o protótipo/i })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: /iniciar demonstração guiada/i })).toBeInTheDocument()
   })
@@ -34,7 +34,7 @@ describe('Implanta foundation', () => {
 
   it('shows a safe empty state when the portfolio has no projects', () => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify({
-      schemaVersion: 1,
+      schemaVersion: 2,
       projects: [],
       perspective: 'client',
       guideVisible: false,
