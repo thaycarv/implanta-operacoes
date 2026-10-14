@@ -8,7 +8,7 @@ export function assessCapacity(project: ImplementationProject): CapacityAssessme
   const reasons: string[] = []
   if (project.profile.hasCustomization) reasons.push('customização prevista')
   if (project.profile.dataStrategy === 'full_migration') reasons.push('migração completa')
-  if (project.profile.storeCount >= 5) reasons.push(`${project.profile.storeCount} lojas`)
+  if (project.profile.storeCount >= 5) reasons.push(`${project.profile.storeCount} unidades`)
   if (project.profile.integrations.length >= 2) reasons.push('múltiplas integrações')
   if (reasons.length) return { classification: 'complex', label: 'Alta coordenação', reasons }
   if (project.profile.storeCount > 1) reasons.push('operação multiunidade')

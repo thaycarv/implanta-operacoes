@@ -1,4 +1,4 @@
-import { ArrowLeft, Calendar, Check, RotateCcw, Store, UserRound, FileText, ClipboardCheck, GitPullRequestArrow, Eye } from 'lucide-react'
+import { ArrowLeft, Calendar, Check, RotateCcw, Building2, UserRound, FileText, ClipboardCheck, GitPullRequestArrow, Eye } from 'lucide-react'
 import { useState } from 'react'
 import { Link, Navigate, useParams } from 'react-router-dom'
 import { StatusBadge } from '../components/StatusBadge'
@@ -82,10 +82,10 @@ export function ImplementationDetailPage() {
   }
 
   const valueItems = [
-    ['Venda processada', project.firstValue.saleProcessed],
-    ['Estoque atualizado', project.firstValue.inventoryUpdated],
-    ['Caixa fechado', project.firstValue.cashClosed],
-    ['Dados reconciliados', project.firstValue.dataReconciled],
+    ['Operação inicial realizada', project.firstValue.saleProcessed],
+    ['Fluxo de processos ativo', project.firstValue.inventoryUpdated],
+    ['Rotina de encerramento validada', project.firstValue.cashClosed],
+    ['Dados essenciais conciliados', project.firstValue.dataReconciled],
   ] as const
 
   const submitChange = (e: React.FormEvent) => {
@@ -153,10 +153,10 @@ export function ImplementationDetailPage() {
           </span>
         </div>
         <div>
-          <Store />
+          <Building2 />
           <span>
             <small>Operação</small>
-            <strong>{project.profile.storeCount} loja(s)</strong>
+            <strong>{project.profile.storeCount} unidade(s)</strong>
           </span>
         </div>
         <div>

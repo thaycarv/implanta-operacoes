@@ -169,7 +169,7 @@ export interface ImplementationProject extends EntityMetadata {
 }
 
 export interface PortfolioState {
-  schemaVersion: 1
+  schemaVersion: number
   projects: ImplementationProject[]
   selectedProjectId?: Identifier
   perspective: ViewPerspective

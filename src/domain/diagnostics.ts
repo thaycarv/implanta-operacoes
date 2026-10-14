@@ -38,31 +38,31 @@ export function generateProjectDiagnostic(project: ImplementationProject): Proje
   }
 
   if (project.firstValue.saleProcessed && project.firstValue.cashClosed) {
-    facts.push('Ciclo operacional concluído: venda processada e caixa fechado')
+    facts.push('Ciclo de uso concluído: operação inicial e rotinas essenciais validadas')
   }
 
   // 2. Análise por cenário e condição
-  if (project.id === 'proj-01' || (project.mainPhase === 'first_value' && !project.firstValue.cashClosed)) {
-    // Cenário Rede Aurora: Go-live feito, mas caixa divergente
-    rootCause = 'Go-live concluído, porém primeiro ciclo operacional bloqueado por divergência crítica no fechamento de caixa.'
-    attentionPoints.push('Divergência financeira no fechamento de caixa impede a validação do ciclo.')
-    attentionPoints.push('Transição para Customer Success retida até a validação das rotinas financeiras.')
-    recommendedAction = 'Realizar auditoria conjunta com a equipe financeira do cliente nas rotinas de sangria e conciliação bancária.'
-    executiveSummary = `A implantação da ${project.profile.clientName} realizou o go-live, mas a operação permanece em estado de bloqueio devido a divergências no fechamento de caixa. O foco prioritário deve ser o saneamento contábil para posterior liberação da transição para CS.`
-  } else if (project.id === 'proj-02' || failedUat.length > 0) {
-    // Cenário Lojas Horizonte: Falha fiscal no UAT
-    rootCause = 'Falha crítica em regras fiscais identificada durante a homologação com o cliente (UAT).'
-    attentionPoints.push('Emissão de documentos fiscais e regras tributárias reprovadas na validação do cliente.')
-    attentionPoints.push('Gate de Go-live bloqueado até reteste e aprovação formal do DRN fiscal.')
-    recommendedAction = 'Ajustar as tabelas de tributação no ambiente de homologação e submeter a novo ciclo de UAT com o responsável fiscal do cliente.'
-    executiveSummary = `A implantação da ${project.profile.clientName} está na fase de homologação (UAT) com pendência impeditiva no cálculo de impostos. O avanço para a fase de go-live está retido até a correção e homologação das notas fiscais.`
-  } else if (project.id === 'proj-03' || (project.firstValue.cashClosed && openPending.length > 0)) {
-    // Cenário Rede Prisma: Ciclo validado com pendência não crítica
-    rootCause = 'Primeiro ciclo operacional validado com sucesso, restando pendências secundárias de parametrização.'
-    attentionPoints.push('Operação de loja estável com vendas, estoque e conciliação validados.')
-    attentionPoints.push('Pendências residuais de baixa severidade a serem acompanhadas pela equipe de suporte.')
-    recommendedAction = 'Formalizar a ata de transição para Customer Success com repasse das pendências não impeditivas para o backlog de sustentação.'
-    executiveSummary = `A implantação da ${project.profile.clientName} concluiu com êxito o primeiro ciclo operacional. O projeto está apto para transição assistida para a equipe de Customer Success.`
+  if (project.id === 'project-1' || (project.mainPhase === 'first_value' && !project.firstValue.dataReconciled)) {
+    // Cenário Polo Universitário Aurora: Go-live feito, mas conciliação de matrículas divergente
+    rootCause = 'Go-live concluído, porém primeiro ciclo de uso bloqueado por divergência crítica na conciliação de matrículas e dados acadêmicos.'
+    attentionPoints.push('Divergência na conciliação com o portal acadêmico impede a validação do ciclo de adoção.')
+    attentionPoints.push('Transição para sustentação contínua retida até a validação das rotinas operacionais.')
+    recommendedAction = 'Realizar alinhamento técnico conjunto com a equipe acadêmica para saneamento dos dados de matrículas.'
+    executiveSummary = `A implantação do ${project.profile.clientName} realizou o go-live, mas a operação permanece em estado de atenção e bloqueio devido a divergências na conciliação acadêmica. O foco prioritário deve ser o saneamento da base para transição segura para sustentação.`
+  } else if (project.id === 'project-3' || failedUat.length > 0) {
+    // Cenário Colégio Horizonte: Inconsistência na homologação
+    rootCause = 'Inconsistência crítica na sincronização do diário de classe identificada durante a homologação com o cliente (UAT).'
+    attentionPoints.push('Sincronização de turmas e diário de classe reprovada no teste de estresse da homologação.')
+    attentionPoints.push('Gate de Go-live bloqueado até reteste e aprovação formal do requisito de integração.')
+    recommendedAction = 'Ajustar os parâmetros de sincronização no ambiente de homologação e submeter a novo ciclo de validação com os coordenadores.'
+    executiveSummary = `A implantação do ${project.profile.clientName} está na fase de homologação (UAT) com pendência impeditiva no sincronismo de dados. O avanço para a fase de go-live está retido até a correção e homologação das turmas.`
+  } else if (project.id === 'project-2' || (project.firstValue.dataReconciled && openPending.length > 0)) {
+    // Cenário Rede Saber Digital: Ciclo validado com pendência não crítica
+    rootCause = 'Primeiro ciclo letivo validado com sucesso, restando entrega complementar de painel pedagógico.'
+    attentionPoints.push('Operação acadêmica estável com matrículas, turmas e registros validados.')
+    attentionPoints.push('Painel pedagógico residual a ser entregue no cronograma de melhoria contínua.')
+    recommendedAction = 'Formalizar a ata de transição para sustentação com repasse da melhoria futura para o backlog planejado.'
+    executiveSummary = `A implantação da ${project.profile.clientName} concluiu com êxito o primeiro ciclo operacional. O projeto está apto para transição assistida para sustentação contínua.`
   } else if (condition === 'blocked') {
     rootCause = `Projeto com ${criticalPending.length} pendência(s) crítica(s) bloqueando o avanço para a próxima fase.`
     attentionPoints.push('Existe dependência externa ou técnica sem resolução dentro do prazo previsto.')

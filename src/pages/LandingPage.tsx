@@ -13,7 +13,7 @@ const evidence = [
 const highlights = [
   { icon: GitBranch, title: 'Rastreabilidade', text: 'Necessidade, requisito, entrega, teste e homologação conectados.' },
   { icon: ShieldCheck, title: 'Exceções controladas', text: 'Criticidade, responsabilidade e prazo preservados ao longo da jornada.' },
-  { icon: CheckCircle2, title: 'Valor além do go-live', text: 'A implantação só alcança seu objetivo após o primeiro ciclo validado.' },
+  { icon: CheckCircle2, title: 'Adoção além do go-live', text: 'A implantação só alcança seu objetivo após o primeiro ciclo de uso validado.' },
   { icon: UsersRound, title: 'Visões conectadas', text: 'Gestão, Implantação e Cliente observam o mesmo projeto no contexto adequado.' },
 ]
 
@@ -35,9 +35,9 @@ export function LandingPage() {
       <main>
         <section className="hero container">
           <div className="hero__content">
-            <p className="eyebrow">Projeto autoral de Implantação, Projetos e Customer Success</p>
-            <h1>Da necessidade do cliente ao primeiro ciclo operacional validado.</h1>
-            <p className="hero__lead">Um protótipo funcional para acompanhar projetos de software entre handoff, discovery, requisitos, desenvolvimento, homologação, go-live e validação do primeiro ciclo operacional.</p>
+            <p className="eyebrow">Projeto autoral de Implantação e Transformação Digital</p>
+            <h1>Da necessidade do projeto ao primeiro ciclo de adoção validado.</h1>
+            <p className="hero__lead">Um cockpit executivo para acompanhar projetos de educação, inovação e transformação digital entre alinhamento, diagnóstico, capacitação, homologação e sustentação.</p>
             <div className="hero__actions">
               <Link className="button button--primary" to="/app/dashboard">Explorar o protótipo <ArrowRight size={17} /></Link>
               <button className="button button--secondary" type="button" onClick={startGuide}>Iniciar demonstração guiada</button>
@@ -57,8 +57,8 @@ export function LandingPage() {
         </section>
 
         <section id="proposta" className="proposal container section">
-          <div><p className="eyebrow">O problema</p><h2>O go-live pode acontecer antes de o valor ser comprovado.</h2></div>
-          <p>Informações fragmentadas dificultam a visualização de prazos, requisitos, bloqueios, responsabilidades e resultados. O Implanta conecta esses elementos do handoff ao primeiro ciclo operacional.</p>
+          <div><p className="eyebrow">O problema</p><h2>O go-live pode acontecer antes de o valor e a adoção serem comprovados.</h2></div>
+          <p>Informações fragmentadas dificultam a visualização de prazos, requisitos, bloqueios, responsabilidades e resultados. O Implanta conecta esses elementos do diagnóstico inicial ao primeiro ciclo de uso prático.</p>
         </section>
 
         <section id="diferenciais" className="section container">
