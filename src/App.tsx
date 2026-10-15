@@ -12,13 +12,13 @@ import { ClientPortalPage } from './pages/ClientPortalPage'
 export function App() {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/app/dashboard" replace />} />
+      <Route path="/" element={<Navigate to="/app/implantacoes" replace />} />
       <Route path="/app" element={<AppShell />}>
-        <Route index element={<Navigate to="dashboard" replace />} />
-        <Route path="dashboard" element={<DashboardPage />} />
+        <Route index element={<Navigate to="implantacoes" replace />} />
         <Route path="implantacoes" element={<ImplementationsPage />} />
         <Route path="implantacoes/nova" element={<NewImplementationPage />} />
         <Route path="implantacoes/:projectId" element={<ImplementationDetailPage />} />
+        <Route path="dashboard" element={<DashboardPage />} />
         <Route path="requisitos" element={<RequirementsPage />} />
         <Route path="testes" element={<TestsPage />} />
         <Route path="mudancas" element={<ScopeChangesPage />} />

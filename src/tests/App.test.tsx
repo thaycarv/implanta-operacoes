@@ -5,7 +5,7 @@ import { PortfolioProvider } from '../state/PortfolioContext'
 import { STORAGE_KEY } from '../state/portfolio'
 
 describe('Implanta foundation', () => {
-  it('redirects root route directly to portfolio dashboard', () => {
+  it('redirects root route directly to project executive view (Option 1)', () => {
     render(
       <MemoryRouter initialEntries={['/']}>
         <PortfolioProvider>
@@ -13,9 +13,9 @@ describe('Implanta foundation', () => {
         </PortfolioProvider>
       </MemoryRouter>,
     )
-    expect(screen.getByRole('heading', { name: /visão geral da carteira/i })).toBeInTheDocument()
-    expect(screen.getByRole('region', { name: /indicadores da carteira/i })).toBeInTheDocument()
-    expect(screen.getByRole('region', { name: /pipeline da jornada de implantação/i })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /ficha executiva/i })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /quadro de atividades/i })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /entregáveis do piloto/i })).toBeInTheDocument()
   })
 
   it('renders client portal directly with coherent project context', () => {
