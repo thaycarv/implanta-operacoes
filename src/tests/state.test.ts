@@ -35,7 +35,7 @@ describe('Portfolio state', () => {
     const storage = { getItem: (key: string) => key === STORAGE_KEY ? '{invalid-json' : null }
     const state = loadState(storage)
     expect(state.projects).toHaveLength(8)
-    expect(state.schemaVersion).toBe(2)
+    expect(state.schemaVersion).toBe(3)
   })
 
   it('records a test execution without blocking exploration', () => {
