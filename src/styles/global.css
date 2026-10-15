@@ -511,4 +511,269 @@
   }
 }
 
+/* ========================================================
+   FICHA EXECUTIVA ONE-PAGE & QUADRO DE ATIVIDADES DO PILOTO
+   ======================================================== */
+.detail-view-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.executive-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1.35fr;
+  gap: 22px;
+  align-items: start;
+  margin-top: 20px;
+}
+
+@media (max-width: 1080px) {
+  .executive-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.deliverables-box {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.deliverables-box__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--sand);
+  padding-bottom: 12px;
+}
+
+.deliverables-box__head h2 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin: 0;
+  color: var(--ink);
+}
+
+.deliverables-box__progress {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--petrol-700);
+  background: rgba(38, 116, 109, 0.1);
+  padding: 4px 12px;
+  border-radius: 14px;
+}
+
+.deliverable-card {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  background: var(--sand);
+  transition: all 0.2s ease;
+}
+
+.deliverable-card.is-done {
+  border-color: #c3e6cb;
+  background: rgba(40, 167, 69, 0.05);
+}
+
+.deliverable-card.is-in-progress {
+  border-color: #b8daff;
+  background: rgba(0, 123, 255, 0.05);
+}
+
+.deliverable-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.deliverable-card__code {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.deliverable-card__title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 2px 0 6px 0;
+  line-height: 1.35;
+}
+
+.deliverable-card__desc {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin: 0 0 10px 0;
+  line-height: 1.45;
+}
+
+.deliverable-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.73rem;
+  color: var(--muted);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding-top: 10px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.deliverable-status-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.deliverable-status-btn {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.deliverable-status-btn:hover {
+  border-color: var(--petrol-700);
+}
+
+.deliverable-status-btn.is-active-done {
+  background: #28a745;
+  color: #ffffff;
+  border-color: #28a745;
+}
+
+.deliverable-status-btn.is-active-wip {
+  background: var(--petrol-700);
+  color: #ffffff;
+  border-color: var(--petrol-700);
+}
+
+.deliverable-status-btn.is-active-todo {
+  background: var(--surface);
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+/* QUADRO KANBAN DO PILOTO */
+.pilot-kanban-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+}
+
+@media (max-width: 1100px) {
+  .pilot-kanban-board {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .pilot-kanban-board {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pilot-kanban-col {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 420px;
+}
+
+.pilot-kanban-col__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--sand);
+  padding-bottom: 10px;
+}
+
+.pilot-kanban-col__head h3 {
+  font-size: 0.88rem;
+  font-weight: 800;
+  margin: 0;
+  color: var(--ink);
+}
+
+.pilot-kanban-col__count {
+  font-size: 0.72rem;
+  font-weight: 800;
+  background: var(--sand);
+  padding: 2px 8px;
+  border-radius: 10px;
+  color: var(--muted);
+}
+
+.pilot-kanban-card {
+  background: var(--sand);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.pilot-kanban-card h4 {
+  font-size: 0.84rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.pilot-kanban-card p {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.pilot-kanban-card__actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding-top: 8px;
+}
+
+.pilot-kanban-card__actions button {
+  font-size: 0.7rem;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: 4px;
+  padding: 3px 8px;
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--ink);
+  transition: all 0.15s ease;
+}
+
+.pilot-kanban-card__actions button:hover {
+  background: var(--petrol-700);
+  color: #ffffff;
+  border-color: var(--petrol-700);
+}
+
 
