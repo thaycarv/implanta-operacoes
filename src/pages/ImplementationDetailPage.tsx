@@ -36,8 +36,8 @@ const statusLabels: Record<RequirementStatus, string> = {
   approved: 'Aprovado',
   in_delivery: 'Em execução',
   delivered: 'Entregue',
-  qa_approved: 'QA aprovado',
-  client_approved: 'Homologado',
+  qa_approved: 'Revisão aprovada',
+  client_approved: 'Validado em campo',
   changed: 'Alterado',
 }
 
@@ -49,16 +49,16 @@ const resultLabel: Record<TestResult, string> = {
 }
 
 const typeLabels: Record<ScopeChangeType, string> = {
-  defect: 'Defeito',
-  requirement_divergence: 'Divergência de requisito',
-  scope_change: 'Mudança de escopo',
-  future_improvement: 'Melhoria futura',
-  configuration_pending: 'Configuração pendente',
+  defect: 'Inconsistência',
+  requirement_divergence: 'Divergência de caso de uso',
+  scope_change: 'Mudança de escopo do piloto',
+  future_improvement: 'Melhoria futura e escala',
+  configuration_pending: 'Pendência de alinhamento',
 }
 
 const changeStatusLabels: Record<ScopeChangeStatus, string> = {
   analysis: 'Em análise',
-  awaiting_client: 'Aguardando cliente',
+  awaiting_client: 'Aguardando validação local',
   approved: 'Aprovada',
   rejected: 'Recusada',
   planned_future: 'Planejada para o futuro',
@@ -108,10 +108,10 @@ export function ImplementationDetailPage() {
   }
 
   const valueItems = [
-    ['Operação inicial realizada', project.firstValue.saleProcessed],
-    ['Fluxo de processos ativo', project.firstValue.inventoryUpdated],
-    ['Rotina de encerramento validada', project.firstValue.cashClosed],
-    ['Dados essenciais conciliados', project.firstValue.dataReconciled],
+    ['Operação do piloto em ambiente real', project.firstValue.saleProcessed],
+    ['Capacitação das equipes concluída', project.firstValue.inventoryUpdated],
+    ['Métricas e evidências de impacto registradas', project.firstValue.cashClosed],
+    ['Diretrizes éticas e governança consolidadas', project.firstValue.dataReconciled],
   ] as const
 
   const submitChange = (e: React.FormEvent) => {
@@ -206,7 +206,7 @@ export function ImplementationDetailPage() {
         <header className="detail-hero">
           <div>
             <p className="eyebrow">
-              Implantação: {project.source === 'visitor' ? 'criada pelo visitante' : 'cenário demonstrativo'}
+              Projeto: {project.source === 'visitor' ? 'criado pelo visitante' : 'cenário demonstrativo'}
             </p>
             <h1>{project.profile.clientName}</h1>
             <p>{project.profile.customerGoal}</p>
@@ -223,21 +223,21 @@ export function ImplementationDetailPage() {
           <div>
             <UserRound />
             <span>
-              <small>Responsável</small>
+              <small>Líder da Facilitação</small>
               <strong>{project.profile.implementationOwner}</strong>
             </span>
           </div>
           <div>
             <Building2 />
             <span>
-              <small>Operação</small>
-              <strong>{project.profile.storeCount} unidade(s)</strong>
+              <small>Abrangência</small>
+              <strong>{project.profile.storeCount} unidade(s) / secretaria(s)</strong>
             </span>
           </div>
           <div>
             <Calendar />
             <span>
-              <small>Previsão de Go-live</small>
+              <small>Previsão de Lançamento do Piloto</small>
               <strong>{new Date(`${project.profile.desiredGoLive}T12:00:00`).toLocaleDateString('pt-BR')}</strong>
             </span>
           </div>
@@ -260,14 +260,14 @@ export function ImplementationDetailPage() {
             className={`detail-tab ${activeTab === 'requirements' ? 'is-active' : ''}`}
             onClick={() => setActiveTab('requirements')}
           >
-            <FileText size={15} /> Requisitos ({project.requirements.length})
+            <FileText size={15} /> Casos de Uso ({project.requirements.length})
           </button>
           <button
             type="button"
             className={`detail-tab ${activeTab === 'tests' ? 'is-active' : ''}`}
             onClick={() => setActiveTab('tests')}
           >
-            <ClipboardCheck size={15} /> Testes QA e UAT ({project.tests.length})
+            <ClipboardCheck size={15} /> Validação em Campo e Mentoria ({project.tests.length})
           </button>
           <button
             type="button"
@@ -281,7 +281,7 @@ export function ImplementationDetailPage() {
             className={`detail-tab ${activeTab === 'portal' ? 'is-active' : ''}`}
             onClick={() => setActiveTab('portal')}
           >
-            <Eye size={15} /> Portal do Cliente
+            <Eye size={15} /> Visão Compartilhada
           </button>
         </nav>
 
@@ -291,7 +291,7 @@ export function ImplementationDetailPage() {
             <section className="panel phase-timeline">
               <div className="panel__head">
                 <div>
-                  <h2>Jornada de implantação</h2>
+                  <h2>Jornada de inovação</h2>
                   <p>Fase atual: {phaseLabel(project.mainPhase)}</p>
                 </div>
               </div>
@@ -318,11 +318,11 @@ export function ImplementationDetailPage() {
                 </div>
                 <div className="facts">
                   <div>
-                    <span>Requisitos validados</span>
+                    <span>Critérios validados</span>
                     <strong>{doneReq} de {project.requirements.length}</strong>
                   </div>
                   <div>
-                    <span>Pacotes de entrega</span>
+                    <span>Pacotes de trabalho</span>
                     <strong>{project.packages.length}</strong>
                   </div>
                   <div>
@@ -330,7 +330,7 @@ export function ImplementationDetailPage() {
                     <strong>{openPending.length}</strong>
                   </div>
                   <div>
-                    <span>Testes registrados</span>
+                    <span>Validações registradas</span>
                     <strong>{project.tests.length}</strong>
                   </div>
                 </div>
@@ -339,8 +339,8 @@ export function ImplementationDetailPage() {
               <section className="panel">
                 <div className="panel__head">
                   <div>
-                    <h2>Ciclo operacional</h2>
-                    <p>{isFirstValueValidated(project) ? 'Ciclo operacional validado' : 'Critérios em validação'}</p>
+                    <h2>Ciclo de impacto</h2>
+                    <p>{isFirstValueValidated(project) ? 'Primeiro ciclo validado' : 'Critérios em consolidação'}</p>
                   </div>
                 </div>
                 <div className="value-list">
@@ -356,8 +356,8 @@ export function ImplementationDetailPage() {
               <section className="panel">
                 <div className="panel__head">
                   <div>
-                    <h2>Esforço de coordenação</h2>
-                    <p>Classe operacional baseada no perfil</p>
+                    <h2>Esforço de facilitação</h2>
+                    <p>Classe operacional baseada no perfil local</p>
                   </div>
                 </div>
                 <strong className={`capacity capacity--${capacity.classification}`}>{capacity.label}</strong>
@@ -367,8 +367,8 @@ export function ImplementationDetailPage() {
               <section className="panel">
                 <div className="panel__head">
                   <div>
-                    <h2>Transição para CS</h2>
-                    <p>Continuidade após a implantação</p>
+                    <h2>Transição para Sustentação</h2>
+                    <p>Institucionalização e comunidade de prática</p>
                   </div>
                 </div>
                 <strong className={`transition transition--${transition.status}`}>{transition.label}</strong>
@@ -407,13 +407,13 @@ export function ImplementationDetailPage() {
           </>
         )}
 
-        {/* Conteúdo da Aba 2: Requisitos e DRN */}
+        {/* Conteúdo da Aba 2: Casos de Uso */}
         {activeTab === 'requirements' && (
           <div className="tab-pane">
             <section className="metrics metrics--compact">
               <article className="metric">
                 <FileText />
-                <span>Requisitos</span>
+                <span>Casos de uso</span>
                 <strong>{coverage.total}</strong>
               </article>
               <article className="metric">
@@ -421,11 +421,11 @@ export function ImplementationDetailPage() {
                 <strong>{coverage.delivered}</strong>
               </article>
               <article className="metric">
-                <span>Homologados</span>
+                <span>Validados</span>
                 <strong>{coverage.clientApproved}</strong>
               </article>
               <article className="metric metric--danger">
-                <span>Bloqueadores de Go-live</span>
+                <span>Bloqueadores do Piloto</span>
                 <strong>{coverage.goLiveBlockersOpen}</strong>
               </article>
             </section>
@@ -434,7 +434,7 @@ export function ImplementationDetailPage() {
               <section className="panel requirement-index">
                 <div className="panel__head">
                   <div>
-                    <h2>DRN estruturado</h2>
+                    <h2>Matriz de casos de uso</h2>
                     <p>{project.requirements.length} itens mapeados</p>
                   </div>
                 </div>
@@ -461,24 +461,24 @@ export function ImplementationDetailPage() {
                   </div>
                   <div className="trace-chain">
                     <article>
-                      <small>1. Necessidade de Negócio</small>
+                      <small>1. Necessidade Pública / Institucional</small>
                       <p>{selectedReq.businessNeed}</p>
                     </article>
                     <article>
-                      <small>2. Regra de Negócio</small>
+                      <small>2. Diretriz ou Regra do Fluxo</small>
                       <p>{selectedReq.businessRule}</p>
                     </article>
                     <article>
-                      <small>3. Critério de Aceite</small>
+                      <small>3. Critério de Aceite e Sucesso</small>
                       <p>{selectedReq.acceptanceCriteria}</p>
                     </article>
                     <article>
                       <small>4. Evidência de Validação</small>
-                      <p>{selectedReq.testIds.length} teste(s) vinculado(s) · validador: {selectedReq.validator}</p>
+                      <p>{selectedReq.testIds.length} validação(ões) vinculada(s) · responsável: {selectedReq.validator}</p>
                     </article>
                   </div>
                   <label className="status-control">
-                    Atualizar estado do requisito
+                    Atualizar estado do caso de uso
                     <select
                       value={selectedReq.status}
                       onChange={(e) =>
@@ -501,13 +501,13 @@ export function ImplementationDetailPage() {
           </div>
         )}
 
-        {/* Conteúdo da Aba 3: Testes QA e UAT */}
+        {/* Conteúdo da Aba 3: Validação em Campo e Mentoria */}
         {activeTab === 'tests' && (
           <div className="tab-pane">
             <section className={`gate-banner ${gate.ready ? 'is-ready' : 'is-blocked'}`}>
               <div>
-                <strong>{gate.ready ? 'Gate de Go-live liberado' : 'Gate de Go-live bloqueado'}</strong>
-                <p>{gate.ready ? 'Critérios críticos atendidos.' : gate.reasons.join(' · ')}</p>
+                <strong>{gate.ready ? 'Gate de Lançamento do Piloto liberado' : 'Gate de Lançamento do Piloto bloqueado'}</strong>
+                <p>{gate.ready ? 'Critérios críticos atendidos para início do piloto no serviço público.' : gate.reasons.join(' · ')}</p>
               </div>
             </section>
 
@@ -517,10 +517,10 @@ export function ImplementationDetailPage() {
                   Todos ({project.tests.length})
                 </button>
                 <button className={testFilter === 'internal' ? 'is-active' : ''} onClick={() => setTestFilter('internal')}>
-                  QA Interno
+                  Revisão Metodológica
                 </button>
                 <button className={testFilter === 'client' ? 'is-active' : ''} onClick={() => setTestFilter('client')}>
-                  UAT Cliente
+                  Validação em Campo
                 </button>
               </nav>
             </section>
@@ -531,7 +531,7 @@ export function ImplementationDetailPage() {
                 return (
                   <article className="panel test-card" key={test.id}>
                     <header>
-                      <span>{test.code} · {test.type === 'internal' ? 'QA Interno' : 'UAT Cliente'}</span>
+                      <span>{test.code} · {test.type === 'internal' ? 'Revisão Metodológica' : 'Validação em Campo'}</span>
                       <b className={`result result--${last?.result ?? 'not_run'}`}>{resultLabel[last?.result ?? 'not_run']}</b>
                     </header>
                     <h2>{test.title}</h2>
@@ -544,7 +544,7 @@ export function ImplementationDetailPage() {
                             projectId: project.id,
                             testId: test.id,
                             result: 'approved',
-                            executor: test.type === 'client' ? project.profile.clientKeyUser : 'Equipe de QA',
+                            executor: test.type === 'client' ? project.profile.clientKeyUser : 'Facilitação Metodológica',
                           })
                         }
                       >
@@ -557,7 +557,7 @@ export function ImplementationDetailPage() {
                             projectId: project.id,
                             testId: test.id,
                             result: 'failed',
-                            executor: test.type === 'client' ? project.profile.clientKeyUser : 'Equipe de QA',
+                            executor: test.type === 'client' ? project.profile.clientKeyUser : 'Facilitação Metodológica',
                           })
                         }
                       >
@@ -647,30 +647,30 @@ export function ImplementationDetailPage() {
           </div>
         )}
 
-        {/* Conteúdo da Aba 5: Portal do Cliente */}
+        {/* Conteúdo da Aba 5: Visão Compartilhada */}
         {activeTab === 'portal' && (
           <div className="tab-pane">
             <section className="panel portal-preview">
               <div className="panel__head">
                 <div>
-                  <h2>Visão simplificada do cliente</h2>
-                  <p>Status compartilhado com {project.profile.clientName}</p>
+                  <h2>Visão compartilhada com o município</h2>
+                  <p>Status transparente para {project.profile.clientName}</p>
                 </div>
               </div>
               <div className="facts" style={{ marginBottom: '20px' }}>
                 <div>
-                  <span>Previsão de Go-live</span>
+                  <span>Previsão de Lançamento do Piloto</span>
                   <strong>{new Date(`${project.profile.desiredGoLive}T12:00:00`).toLocaleDateString('pt-BR')}</strong>
                 </div>
                 <div>
-                  <span>UAT Homologados</span>
+                  <span>Validações em Campo Aprovadas</span>
                   <strong>
                     {project.tests.filter((t) => t.type === 'client' && t.executions.at(-1)?.result === 'approved').length} de{' '}
                     {project.tests.filter((t) => t.type === 'client').length}
                   </strong>
                 </div>
                 <div>
-                  <span>Pendências sob responsabilidade do cliente</span>
+                  <span>Ações sob responsabilidade do município</span>
                   <strong>{project.pendingItems.filter((p) => p.origin === 'client' && p.status === 'open').length}</strong>
                 </div>
               </div>

@@ -1,6 +1,5 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { AppShell } from './components/layout/AppShell'
-import { LandingPage } from './pages/LandingPage'
 import { DashboardPage } from './pages/DashboardPage'
 import { ImplementationsPage } from './pages/ImplementationsPage'
 import { ImplementationDetailPage } from './pages/ImplementationDetailPage'
@@ -13,7 +12,7 @@ import { ClientPortalPage } from './pages/ClientPortalPage'
 export function App() {
   return (
     <Routes>
-      <Route path="/" element={<LandingPage />} />
+      <Route path="/" element={<Navigate to="/app/dashboard" replace />} />
       <Route path="/app" element={<AppShell />}>
         <Route index element={<Navigate to="dashboard" replace />} />
         <Route path="dashboard" element={<DashboardPage />} />

@@ -31,32 +31,32 @@ interface KanbanStage {
 const kanbanStages: KanbanStage[] = [
   {
     id: 'discovery',
-    title: '1. Diagnóstico & Entrada',
-    description: 'Diagnóstico de maturidade e alinhamento',
+    title: '1. Adesão & Diagnóstico',
+    description: 'Adesão institucional e diagnóstico de maturidade local',
     phases: ['handoff', 'discovery'],
   },
   {
     id: 'planning',
-    title: '2. Requisitos & Planejamento',
-    description: 'Matriz de requisitos e plano técnico',
+    title: '2. Casos de Uso & Planejamento',
+    description: 'Trilha formativa e plano de trabalho do piloto',
     phases: ['requirements', 'technical_planning'],
   },
   {
     id: 'execution',
-    title: '3. Execução & Testes QA',
-    description: 'Desenvolvimento e testes internos de QA',
+    title: '3. Oficinas & Prototipagem',
+    description: 'Oficinas práticas e revisão metodológica',
     phases: ['delivery', 'internal_qa'],
   },
   {
     id: 'validation',
-    title: '4. Homologação & Go-Live',
-    description: 'Validação pelo cliente e entrada em produção',
+    title: '4. Validação em Campo & Lançamento',
+    description: 'Experimentação assistida e lançamento do piloto no serviço público',
     phases: ['client_validation', 'go_live'],
   },
   {
     id: 'adoption',
-    title: '5. Sustentação & Adoção',
-    description: 'Primeiro ciclo validado e sustentação contínua',
+    title: '5. Sustentação & Escala',
+    description: 'Multiplicação de conhecimentos e institucionalização',
     phases: ['first_value'],
   },
 ]
@@ -69,7 +69,7 @@ export function DashboardPage() {
   const openItems = state.projects.flatMap(project => project.pendingItems.filter(item => item.status === 'open').map(item => ({ ...item, project }))).slice(0, 5)
 
   const reset = () => {
-    if (window.confirm('Restaurar todo o cenário inicial? Implantações criadas durante o teste serão removidas.')) {
+    if (window.confirm('Restaurar todo o cenário inicial? Projetos criados durante a exploração serão removidos.')) {
       dispatch({ type: 'portfolio/reset' })
     }
   }
@@ -84,7 +84,7 @@ export function DashboardPage() {
         <div>
           <p className="eyebrow">Cockpit de Monitoramento</p>
           <h1>Visão geral da carteira</h1>
-          <p>Acompanhamento integrado do diagnóstico ao primeiro ciclo de adoção validado.</p>
+          <p>Acompanhamento integrado da adesão municipal ao ciclo de multiplicação e escala.</p>
         </div>
         <div className="page__actions">
           <div className="view-switch" role="group" aria-label="Modo de visualização">
@@ -107,7 +107,7 @@ export function DashboardPage() {
             <RotateCcw size={16} /> Restaurar dados
           </button>
           <Link className="button button--primary" to="/app/implantacoes/nova">
-            <Plus size={16} /> Nova implantação
+            <Plus size={16} /> Novo projeto
           </Link>
         </div>
       </header>
@@ -128,7 +128,7 @@ export function DashboardPage() {
         </article>
         <article className="metric metric--warning">
           <CalendarClock />
-          <span>Go-lives próximos</span>
+          <span>Pilotos a lançar</span>
           <strong>{indicators.upcomingGoLives}</strong>
           <small>Previsão em até 15 dias</small>
         </article>
