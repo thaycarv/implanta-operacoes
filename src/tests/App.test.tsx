@@ -33,7 +33,7 @@ describe('Implanta foundation', () => {
     localStorage.setItem(
       STORAGE_KEY,
       JSON.stringify({
-        schemaVersion: 2,
+        schemaVersion: 3,
         projects: [],
         perspective: 'client',
         guideVisible: false,
