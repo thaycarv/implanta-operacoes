@@ -26,8 +26,8 @@ export function ClientPortalPage() {
     return (
       <div className="page">
         <section className="panel no-results" role="status">
-          <h1>Nenhuma implantação disponível</h1>
-          <p>Crie uma implantação ou restaure os dados de demonstração para acessar o Portal do Cliente.</p>
+          <h1>Nenhum projeto disponível</h1>
+          <p>Crie um projeto ou restaure os dados de demonstração para acessar a visão compartilhada.</p>
         </section>
       </div>
     )
@@ -58,7 +58,7 @@ export function ClientPortalPage() {
             IMPLANTA
           </span>
 
-          <small>Visão compartilhada com o cliente</small>
+          <small>Visão compartilhada com o município e lideranças</small>
         </div>
 
         <label>
@@ -80,13 +80,13 @@ export function ClientPortalPage() {
       <main>
         <section className="client-welcome">
           <div>
-            <p className="eyebrow">Sua implantação</p>
+            <p className="eyebrow">Seu projeto de inovação</p>
 
             <h1>Olá, {project.profile.clientName}</h1>
 
             <p>
               Acompanhe o que já avançou, o próximo marco e onde precisamos da
-              sua participação.
+              participação da equipe local.
             </p>
           </div>
 
@@ -103,7 +103,7 @@ export function ClientPortalPage() {
             <strong>{phaseLabel(project.mainPhase, true)}</strong>
 
             <small>
-              Responsável: {project.profile.implementationOwner}
+              Líder da Facilitação: {project.profile.implementationOwner}
             </small>
           </article>
 
@@ -120,21 +120,21 @@ export function ClientPortalPage() {
                 ? new Date(
                     `${next.forecastDate}T12:00:00`,
                   ).toLocaleDateString('pt-BR')
-                : 'Ciclo operacional validado'}
+                : 'Ciclo operacional e impacto validados'}
             </small>
           </article>
 
           <article>
             <span>
               <CircleAlert />
-              Ações do cliente
+              Ações do município
             </span>
 
             <strong>{clientItems.length}</strong>
 
             <small>
               {clientItems.length
-                ? 'item(ns) aguardando sua participação'
+                ? 'item(ns) aguardando participação local'
                 : 'Nenhuma ação pendente'}
             </small>
           </article>
@@ -144,7 +144,7 @@ export function ClientPortalPage() {
           <section className="panel">
             <div className="panel__head">
               <div>
-                <h2>O que precisamos de você</h2>
+                <h2>O que precisamos da equipe local</h2>
                 <p>Responsabilidades claras e contextualizadas</p>
               </div>
             </div>
@@ -174,7 +174,7 @@ export function ClientPortalPage() {
 
                 <strong>Tudo em dia por aqui</strong>
 
-                <span>Nenhuma dependência do cliente está aberta.</span>
+                <span>Nenhuma dependência local está aberta no momento.</span>
               </div>
             )}
           </section>
@@ -182,8 +182,8 @@ export function ClientPortalPage() {
           <section className="panel">
             <div className="panel__head">
               <div>
-                <h2>Ciclo operacional</h2>
-                <p>Confirmação do funcionamento da operação em produção</p>
+                <h2>Ciclo de impacto e sustentação</h2>
+                <p>Confirmação da operação do piloto no serviço público</p>
               </div>
             </div>
 
@@ -200,7 +200,7 @@ export function ClientPortalPage() {
 
               <p>
                 {value.ready
-                  ? 'Operação, fluxos e dados essenciais foram homologados e conciliados.'
+                  ? 'Operação do piloto, fluxos de atendimento e diretrizes foram validados.'
                   : value.reasons.slice(0, 3).join(' · ')}
               </p>
             </div>
@@ -208,8 +208,8 @@ export function ClientPortalPage() {
         </div>
 
         <footer className="client-note">
-          Esta visão simplifica a comunicação sem esconder riscos, decisões ou
-          responsabilidades.
+          Esta visão simplifica o acompanhamento sem esconder riscos, decisões ou
+          responsabilidades mútuas.
         </footer>
       </main>
     </div>

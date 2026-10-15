@@ -1,15 +1,15 @@
 import type { DependencyOrigin, OperationalCondition, PhaseId } from '../types'
 
 export const phases: Array<{ id: PhaseId; label: string; shortLabel: string; inactivityDays: number }> = [
-  { id: 'handoff', label: 'Handoff comercial', shortLabel: 'Handoff', inactivityDays: 2 },
-  { id: 'discovery', label: 'Discovery', shortLabel: 'Discovery', inactivityDays: 3 },
-  { id: 'requirements', label: 'Requisitos e desenho da solução', shortLabel: 'Requisitos', inactivityDays: 3 },
-  { id: 'technical_planning', label: 'Refinamento técnico e planejamento', shortLabel: 'Planejamento técnico', inactivityDays: 2 },
-  { id: 'delivery', label: 'Configuração e desenvolvimento', shortLabel: 'Desenvolvimento', inactivityDays: 3 },
-  { id: 'internal_qa', label: 'Validação interna e QA', shortLabel: 'QA interno', inactivityDays: 2 },
-  { id: 'client_validation', label: 'Homologação com o cliente', shortLabel: 'Homologação', inactivityDays: 2 },
-  { id: 'go_live', label: 'Preparação e go-live', shortLabel: 'Go-live', inactivityDays: 1 },
-  { id: 'first_value', label: 'Ciclo operacional e transição', shortLabel: 'Ciclo validado', inactivityDays: 1 },
+  { id: 'handoff', label: 'Adesão e alinhamento institucional', shortLabel: 'Adesão', inactivityDays: 2 },
+  { id: 'discovery', label: 'Diagnóstico de maturidade e capacidades locais', shortLabel: 'Diagnóstico', inactivityDays: 3 },
+  { id: 'requirements', label: 'Trilha formativa e casos de uso priorizados', shortLabel: 'Casos de uso', inactivityDays: 3 },
+  { id: 'technical_planning', label: 'Plano de trabalho e recursos do piloto', shortLabel: 'Plano do piloto', inactivityDays: 2 },
+  { id: 'delivery', label: 'Oficinas práticas e estruturação do piloto', shortLabel: 'Oficinas e piloto', inactivityDays: 3 },
+  { id: 'internal_qa', label: 'Revisão metodológica e mentoria quinzenal', shortLabel: 'Revisão metodológica', inactivityDays: 2 },
+  { id: 'client_validation', label: 'Validação em campo com servidores e lideranças', shortLabel: 'Validação em campo', inactivityDays: 2 },
+  { id: 'go_live', label: 'Lançamento do piloto no serviço público', shortLabel: 'Lançamento do piloto', inactivityDays: 1 },
+  { id: 'first_value', label: 'Multiplicação de conhecimentos e institucionalização', shortLabel: 'Escala e impacto', inactivityDays: 1 },
 ]
 
 export const conditionLabels: Record<OperationalCondition, string> = {
@@ -22,8 +22,13 @@ export const conditionLabels: Record<OperationalCondition, string> = {
 }
 
 export const dependencyLabels: Record<DependencyOrigin, string> = {
-  client: 'Cliente', implementation: 'Implantação', technical_team: 'Time técnico',
-  sales: 'Comercial', customer_success: 'Customer Success', external: 'Externo', shared: 'Compartilhada',
+  client: 'Município / Secretaria',
+  implementation: 'Facilitação do programa',
+  technical_team: 'Equipe local de dados e TI',
+  sales: 'Articulação e adesão',
+  customer_success: 'Comunidade de prática',
+  external: 'Parceiro externo / Controle',
+  shared: 'Responsabilidade compartilhada',
 }
 
 export function phaseLabel(id: PhaseId, short = false) {

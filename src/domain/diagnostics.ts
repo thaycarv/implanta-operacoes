@@ -21,7 +21,7 @@ export function generateProjectDiagnostic(project: ImplementationProject): Proje
     const last = t.executions.at(-1)
     return last?.result === 'failed'
   })
-  const failedUat = failedTests.filter((t) => t.type === 'client')
+  const failedFieldValidation = failedTests.filter((t) => t.type === 'client')
 
   const facts: string[] = []
   const attentionPoints: string[] = []
@@ -34,50 +34,50 @@ export function generateProjectDiagnostic(project: ImplementationProject): Proje
   facts.push(`Pendências em aberto: ${openPending.length} item(ns)`)
 
   if (failedTests.length > 0) {
-    facts.push(`Testes reprovados registrados: ${failedTests.length} caso(s)`)
+    facts.push(`Validações reprovadas ou com ressalva: ${failedTests.length} caso(s)`)
   }
 
   if (project.firstValue.saleProcessed && project.firstValue.cashClosed) {
-    facts.push('Ciclo de uso concluído: operação inicial e rotinas essenciais validadas')
+    facts.push('Ciclo de impacto concluído: operação do piloto e rotinas essenciais validadas')
   }
 
   // 2. Análise por cenário e condição
   if (project.id === 'project-1' || (project.mainPhase === 'first_value' && !project.firstValue.dataReconciled)) {
-    // Cenário Polo Universitário Aurora: Go-live feito, mas conciliação de matrículas divergente
-    rootCause = 'Go-live concluído, porém primeiro ciclo de uso bloqueado por divergência crítica na conciliação de matrículas e dados acadêmicos.'
-    attentionPoints.push('Divergência na conciliação com o portal acadêmico impede a validação do ciclo de adoção.')
-    attentionPoints.push('Transição para sustentação contínua retida até a validação das rotinas operacionais.')
-    recommendedAction = 'Realizar alinhamento técnico conjunto com a equipe acadêmica para saneamento dos dados de matrículas.'
-    executiveSummary = `A implantação do ${project.profile.clientName} realizou o go-live, mas a operação permanece em estado de atenção e bloqueio devido a divergências na conciliação acadêmica. O foco prioritário deve ser o saneamento da base para transição segura para sustentação.`
-  } else if (project.id === 'project-3' || failedUat.length > 0) {
-    // Cenário Colégio Horizonte: Inconsistência na homologação
-    rootCause = 'Inconsistência crítica na sincronização do diário de classe identificada durante a homologação com o cliente (UAT).'
-    attentionPoints.push('Sincronização de turmas e diário de classe reprovada no teste de estresse da homologação.')
-    attentionPoints.push('Gate de Go-live bloqueado até reteste e aprovação formal do requisito de integração.')
-    recommendedAction = 'Ajustar os parâmetros de sincronização no ambiente de homologação e submeter a novo ciclo de validação com os coordenadores.'
-    executiveSummary = `A implantação do ${project.profile.clientName} está na fase de homologação (UAT) com pendência impeditiva no sincronismo de dados. O avanço para a fase de go-live está retido até a correção e homologação das turmas.`
+    // Cenário Polo Universitário Aurora / Município com piloto ativo
+    rootCause = 'Lançamento do piloto realizado, porém primeiro ciclo de impacto bloqueado por divergência crítica na consolidação de dados e cadastros dos serviços locais.'
+    attentionPoints.push('Divergência de integração com o sistema municipal impede a validação do ciclo de adoção.')
+    attentionPoints.push('Transição para escala e institucionalização retida até a validação das rotinas de atendimento.')
+    recommendedAction = 'Realizar alinhamento técnico conjunto com a liderança local e equipe de dados para saneamento dos cadastros.'
+    executiveSummary = `O projeto de inovação do ${project.profile.clientName} realizou o lançamento do piloto no serviço público, mas a operação permanece em estado de atenção e bloqueio devido a divergências na consolidação de dados. O foco prioritário deve ser o saneamento da base para transição segura para a etapa de institucionalização e multiplicação.`
+  } else if (project.id === 'project-3' || failedFieldValidation.length > 0) {
+    // Cenário Colégio Horizonte / Validação em Campo
+    rootCause = 'Inconsistência crítica na sincronização de atendimentos identificada durante a validação em campo com os servidores.'
+    attentionPoints.push('Sincronização de atendimentos e rotinas reprovada no teste de validação prática.')
+    attentionPoints.push('Gate de Lançamento do Piloto bloqueado até reteste e aprovação formal do critério de integração.')
+    recommendedAction = 'Ajustar os parâmetros de integração no ambiente de testes e submeter a novo ciclo de validação prática com os servidores e coordenadores.'
+    executiveSummary = `O projeto do ${project.profile.clientName} está na fase de validação prática em campo com pendência impeditiva no fluxo de dados. O avanço para o lançamento do piloto está retido até a correção e homologação das turmas e fluxos.`
   } else if (project.id === 'project-2' || (project.firstValue.dataReconciled && openPending.length > 0)) {
-    // Cenário Rede Saber Digital: Ciclo validado com pendência não crítica
-    rootCause = 'Primeiro ciclo letivo validado com sucesso, restando entrega complementar de painel pedagógico.'
-    attentionPoints.push('Operação acadêmica estável com matrículas, turmas e registros validados.')
-    attentionPoints.push('Painel pedagógico residual a ser entregue no cronograma de melhoria contínua.')
-    recommendedAction = 'Formalizar a ata de transição para sustentação com repasse da melhoria futura para o backlog planejado.'
-    executiveSummary = `A implantação da ${project.profile.clientName} concluiu com êxito o primeiro ciclo operacional. O projeto está apto para transição assistida para sustentação contínua.`
+    // Cenário Rede Saber Digital / Ciclo validado com melhoria complementar
+    rootCause = 'Primeiro ciclo de impacto do piloto validado com sucesso, restando entrega complementar de painel de indicadores.'
+    attentionPoints.push('Operação dos servidores estável com rotinas e registros validados no serviço público.')
+    attentionPoints.push('Painel complementar de indicadores a ser entregue no cronograma de melhoria contínua.')
+    recommendedAction = 'Formalizar o termo de conclusão do piloto e transição para sustentação com repasse da melhoria futura para a comunidade de prática.'
+    executiveSummary = `O projeto da ${project.profile.clientName} concluiu com êxito o primeiro ciclo do piloto. A iniciativa está apta para transição assistida para institucionalização e escala contínua.`
   } else if (condition === 'blocked') {
-    rootCause = `Projeto com ${criticalPending.length} pendência(s) crítica(s) bloqueando o avanço para a próxima fase.`
-    attentionPoints.push('Existe dependência externa ou técnica sem resolução dentro do prazo previsto.')
-    recommendedAction = 'Convocar alinhamento emergencial com o patrocinador do projeto para repactuar prazos e destravar dependências.'
-    executiveSummary = `A implantação da ${project.profile.clientName} encontra-se bloqueada. É necessário intervenção da coordenação para alinhamento de pendências com o cliente.`
+    rootCause = `Projeto com ${criticalPending.length} pendência(s) crítica(s) bloqueando o avanço para a próxima etapa da jornada.`
+    attentionPoints.push('Existe dependência externa ou institucional sem resolução dentro do prazo previsto.')
+    recommendedAction = 'Convocar alinhamento emergencial com a liderança patrocinadora do projeto para repactuar prazos e destravar dependências.'
+    executiveSummary = `O projeto da ${project.profile.clientName} encontra-se bloqueado. É necessária intervenção da coordenação para alinhamento de pendências institucionais.`
   } else if (condition === 'attention' || condition === 'delayed') {
-    rootCause = 'Cronograma com marcos atrasados ou acúmulo de pendências em acompanhamento.'
-    attentionPoints.push('Prazos de entrega próximos ao limite acordado.')
-    recommendedAction = 'Revisar o plano de trabalho e redistribuir atividades para evitar atrasos no go-live.'
-    executiveSummary = `A implantação da ${project.profile.clientName} requer atenção preventiva na gestão de pendências para manter a previsão de go-live.`
+    rootCause = 'Cronograma com oficinas atrasadas ou acúmulo de pendências em acompanhamento.'
+    attentionPoints.push('Prazos de entrega de entregáveis próximos ao limite acordado.')
+    recommendedAction = 'Revisar o plano de trabalho e redistribuir oficinas para evitar atrasos no lançamento do piloto.'
+    executiveSummary = `O projeto da ${project.profile.clientName} requer atenção preventiva na gestão de pendências para manter a previsão de lançamento do piloto.`
   } else {
     rootCause = 'Projeto operando dentro dos parâmetros de normalidade e cronograma planejado.'
     attentionPoints.push('Nenhum bloqueio crítico identificado no momento.')
-    recommendedAction = 'Manter o acompanhamento periódico dos marcos e execução dos testes programados.'
-    executiveSummary = `A implantação da ${project.profile.clientName} segue em conformidade com o cronograma de implantação.`
+    recommendedAction = 'Manter o acompanhamento periódico das oficinas, mentorias e marcos programados.'
+    executiveSummary = `O projeto da ${project.profile.clientName} segue em conformidade com o plano de trabalho e cronograma do programa.`
   }
 
   return {
@@ -95,9 +95,9 @@ export function formatExecutiveStatusReport(project: ImplementationProject, diag
   const openPending = project.pendingItems.filter((i) => i.status === 'open')
   const dateStr = new Date().toLocaleDateString('pt-BR')
 
-  return `*Status Report de Implantação: ${project.profile.clientName}*
+  return `*Status Report de Inovação e Transformação: ${project.profile.clientName}*
 Data: ${dateStr}
-Responsável da Implantação: ${project.profile.implementationOwner}
+Líder da Facilitação: ${project.profile.implementationOwner}
 Fase Atual: ${phaseLabel(project.mainPhase, true)}
 Condição Operacional: ${diagnostic.condition.toUpperCase()}
 

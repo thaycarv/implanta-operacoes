@@ -2,12 +2,10 @@ import {
   BarChart3,
   LayoutDashboard,
   RotateCcw,
-  Map,
 } from 'lucide-react'
 import { NavLink, Outlet } from 'react-router-dom'
 import { Brand } from '../Brand'
 import { usePortfolio } from '../../state/PortfolioContext'
-import { GuidedTour } from '../GuidedTour'
 
 const navigation = [
   { to: '/app/dashboard', label: 'Visão geral da carteira', icon: LayoutDashboard },
@@ -18,7 +16,7 @@ export function AppShell() {
   const { dispatch } = usePortfolio()
 
   const resetPortfolio = () => {
-    if (window.confirm('Restaurar todo o cenário inicial? Implantações criadas durante o teste serão removidas.')) {
+    if (window.confirm('Restaurar todo o cenário inicial? Projetos criados durante a exploração serão removidos.')) {
       dispatch({ type: 'portfolio/reset' })
     }
   }
@@ -42,26 +40,17 @@ export function AppShell() {
         </nav>
 
         <div className="sidebar__footer">
-          <button
-            className="sidebar__reset sidebar__guide"
-            type="button"
-            onClick={() => dispatch({ type: 'guide/set', visible: true })}
-          >
-            <Map size={16} aria-hidden="true" />
-            Roteiro guiado
-          </button>
           <button className="sidebar__reset" type="button" onClick={resetPortfolio}>
             <RotateCcw size={16} aria-hidden="true" />
             Restaurar dados
           </button>
-          <p>Gestão de implantações orientada a valor e adoção prática.</p>
+          <p>Gestão de programas de inovação pública, transformação digital e adoção prática.</p>
         </div>
       </aside>
 
       <main className="workspace">
         <Outlet />
       </main>
-      <GuidedTour />
     </div>
   )
 }
