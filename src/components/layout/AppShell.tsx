@@ -1,5 +1,5 @@
 import {
-  BarChart3,
+  FileText,
   LayoutDashboard,
   RotateCcw,
 } from 'lucide-react'
@@ -8,8 +8,8 @@ import { Brand } from '../Brand'
 import { usePortfolio } from '../../state/PortfolioContext'
 
 const navigation = [
-  { to: '/app/dashboard', label: 'Visão geral da carteira', icon: LayoutDashboard },
-  { to: '/app/implantacoes', label: 'Implantações e Diagnóstico', icon: BarChart3 },
+  { to: '/app/implantacoes', label: 'Ficha Executiva e Projetos', icon: FileText },
+  { to: '/app/dashboard', label: 'Pipeline da Carteira', icon: LayoutDashboard },
 ]
 
 export function AppShell() {
