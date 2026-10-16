@@ -150,7 +150,7 @@ export function ImplementationDetailPage() {
         </div>
       </aside>
 
-      {/* COCKPIT DE DETALHES (DIREITA): Projeto Selecionado */}
+      {/* DETALHES DO PROJETO (DIREITA): Projeto Selecionado */}
       <main className="split-detail">
         <div className="detail-top-nav">
           <Link className="back-link" to="/app/dashboard">

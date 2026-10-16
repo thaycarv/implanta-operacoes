@@ -13,7 +13,7 @@ export function ImplementationsPage() {
     <div className="page">
       <div className="empty-state">
         <h2>Nenhuma implantação disponível</h2>
-        <p>Crie uma nova implantação ou restaure os dados demonstrativos para acessar o cockpit.</p>
+        <p>Crie uma nova implantação ou restaure os dados demonstrativos para acessar os projetos.</p>
       </div>
     </div>
   )

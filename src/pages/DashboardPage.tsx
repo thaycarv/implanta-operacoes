@@ -82,9 +82,7 @@ export function DashboardPage() {
     <div className="page">
       <header className="page__header">
         <div>
-          <p className="eyebrow">Cockpit de Monitoramento</p>
-          <h1>Visão geral da carteira</h1>
-          <p>Acompanhamento integrado da adesão municipal ao ciclo de multiplicação e escala.</p>
+          <h1>Visão geral de projetos</h1>
         </div>
         <div className="page__actions">
           <div className="view-switch" role="group" aria-label="Modo de visualização">
@@ -113,30 +111,27 @@ export function DashboardPage() {
       </header>
 
       {/* Faixa Executiva de Indicadores */}
-      <section className="metrics" aria-label="Indicadores da carteira">
+      <section className="metrics" aria-label="Indicadores de projetos">
         <article className="metric">
           <Users />
           <span>Projetos em curso</span>
           <strong>{indicators.activeProjects}</strong>
-          <small>{state.projects.length} instituições acompanhadas</small>
         </article>
         <article className="metric metric--danger">
           <ShieldAlert />
-          <span>Bloqueios ativos</span>
+          <span>Pontos de Atenção</span>
           <strong>{indicators.blockedProjects}</strong>
-          <small>Exigem ação imediata</small>
+          <small>Verificar</small>
         </article>
         <article className="metric metric--warning">
           <CalendarClock />
           <span>Pilotos a lançar</span>
           <strong>{indicators.upcomingGoLives}</strong>
-          <small>Previsão em até 15 dias</small>
         </article>
         <article className="metric metric--success">
           <CircleCheck />
           <span>Ciclos validados</span>
           <strong>{indicators.firstValueValidated}</strong>
-          <small>Operação em sustentação</small>
         </article>
       </section>
 
@@ -225,7 +220,7 @@ export function DashboardPage() {
                 <p>Volume de projetos em cada uma das 9 etapas</p>
               </div>
               <Link to="/app/implantacoes">
-                Ver cockpit <ArrowRight size={15} />
+                Ver projetos <ArrowRight size={15} />
               </Link>
             </div>
             <div className="phase-bars">
