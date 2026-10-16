@@ -8,8 +8,8 @@ import { Brand } from '../Brand'
 import { usePortfolio } from '../../state/PortfolioContext'
 
 const navigation = [
-  { to: '/app/implantacoes', label: 'Ficha Executiva e Projetos', icon: FileText },
-  { to: '/app/dashboard', label: 'Pipeline da Carteira', icon: LayoutDashboard },
+  { to: '/app/dashboard', label: 'Visão Geral', icon: LayoutDashboard },
+  { to: '/app/implantacoes', label: 'Projetos', icon: FileText },
 ]
 
 export function AppShell() {
@@ -44,7 +44,7 @@ export function AppShell() {
             <RotateCcw size={16} aria-hidden="true" />
             Restaurar dados
           </button>
-          <p>Gestão de programas de inovação pública, transformação digital e adoção prática.</p>
+          <p>Gestão de programas de inovação e transformação digital.</p>
         </div>
       </aside>
 
