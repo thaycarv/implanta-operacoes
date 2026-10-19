@@ -76,30 +76,33 @@ export function App() {
     <div className="app-shell">
       <Header />
 
-      <main className="workspace">
-        {/* Seletor Centralizado de Empreendimentos */}
+      <main className="workspace-wide">
+        {/* Barra Lateral: Seleção das Iniciativas */}
         <InitiativeSelector
           initiatives={initiatives}
           selectedId={selectedId}
           onSelect={setSelectedId}
         />
 
-        {/* Esteira Visual das 4 Fases */}
-        <PipelineTracker
-          currentPhase={selectedInitiative.currentPhase}
-          progressPercentage={selectedInitiative.progressPercentage}
-        />
+        {/* Painel Principal Executivo */}
+        <div className="main-content-panel">
+          {/* Esteira Visual das 4 Fases */}
+          <PipelineTracker
+            currentPhase={selectedInitiative.currentPhase}
+            progressPercentage={selectedInitiative.progressPercentage}
+          />
 
-        {/* Card Executivo Central da Iniciativa */}
-        <InitiativeCard
-          initiative={selectedInitiative}
-          onToggleChecklist={handleToggleChecklist}
-          onAdvancePhase={handleAdvancePhase}
-          onOpenReport={() => setIsReportModalOpen(true)}
-        />
+          {/* Card Executivo Central da Iniciativa */}
+          <InitiativeCard
+            initiative={selectedInitiative}
+            onToggleChecklist={handleToggleChecklist}
+            onAdvancePhase={handleAdvancePhase}
+            onOpenReport={() => setIsReportModalOpen(true)}
+          />
+        </div>
       </main>
 
-      {/* Rodapé Centralizado */}
+      {/* Rodapé */}
       <Footer />
 
       {/* Modal do Status Report */}

@@ -87,13 +87,17 @@ body {
   border: 1px solid #c7f3de;
 }
 
-/* Workspace Centralizado */
-.workspace {
-  max-width: 960px;
+/* Workspace Amplo em Tela Cheia com Barra Lateral */
+.workspace-wide {
+  max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding: 36px 20px 60px;
+  padding: 24px 24px 48px;
   flex: 1;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 24px;
+  align-items: start;
 }
 
 .eyebrow {
@@ -105,52 +109,70 @@ body {
   margin: 0 0 6px;
 }
 
-/* Seletor Centralizado de Iniciativas */
-.selector-container {
+/* Barra Lateral de Iniciativas */
+.initiative-sidebar {
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 20px;
+}
+
+.sidebar-header {
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 14px;
+}
+
+.sidebar-title {
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0 0 4px;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.sidebar-subtitle {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.sidebar-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 28px;
-}
-
-.selector-label h2 {
-  font-size: clamp(24px, 3.2vw, 32px);
-  margin: 0 0 20px;
-  letter-spacing: -0.02em;
-}
-
-.selector-buttons {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 12px;
-  width: 100%;
-  max-width: 960px;
+  gap: 10px;
 }
 
 .initiative-btn {
-  background: #ffffff;
+  background: #fbfdfc;
   border: 1px solid var(--line);
   border-radius: 10px;
-  padding: 12px 14px;
+  padding: 14px 14px;
   text-align: left;
   cursor: pointer;
   transition: all 0.15s ease;
   display: flex;
   flex-direction: column;
   gap: 6px;
+  width: 100%;
 }
 
 .initiative-btn:hover {
-  border-color: #a4b8af;
-  background: #fafcfb;
+  border-color: #9eb5aa;
+  background: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
 }
 
 .initiative-btn.active {
   background: var(--ink);
   border-color: var(--ink);
   color: #ffffff;
-  box-shadow: 0 4px 12px rgba(17, 38, 32, 0.12);
+  box-shadow: 0 6px 16px rgba(17, 38, 32, 0.16);
 }
 
 .initiative-btn.active .initiative-name {
@@ -158,26 +180,72 @@ body {
 }
 
 .initiative-btn.active .initiative-segment {
-  color: #9cb3a8;
+  color: #a3c2b4;
+}
+
+.initiative-btn.active .meta-beneficiaries {
+  color: #cfe1d8;
+}
+
+.initiative-btn.active .meta-progress {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
 }
 
 .btn-top {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
 }
 
 .initiative-name {
-  font-size: 13px;
+  font-size: 13.5px;
   font-weight: 700;
   color: var(--ink);
   line-height: 1.25;
 }
 
 .initiative-segment {
+  font-size: 11.5px;
+  color: var(--muted);
+  line-height: 1.35;
+  margin: 0;
+}
+
+.sidebar-btn-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+  padding-top: 8px;
+  border-top: 1px dashed rgba(0, 0, 0, 0.08);
+}
+
+.initiative-btn.active .sidebar-btn-meta {
+  border-top-color: rgba(255, 255, 255, 0.15);
+}
+
+.meta-beneficiaries {
   font-size: 11px;
   color: var(--muted);
+}
+
+.meta-progress {
+  font-size: 10.5px;
+  font-weight: 700;
+  background: #eef5f1;
+  color: var(--green);
+  padding: 2px 7px;
+  border-radius: 999px;
+}
+
+/* Painel Principal de Conteúdo */
+.main-content-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
 }
 
 /* Status Pills */
@@ -757,7 +825,23 @@ footer b {
 }
 
 /* Responsividade */
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
+  .workspace-wide {
+    grid-template-columns: 280px 1fr;
+    gap: 18px;
+    padding: 18px 16px 40px;
+  }
+}
+
+@media (max-width: 860px) {
+  .workspace-wide {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 16px 14px 36px;
+  }
+  .initiative-sidebar {
+    position: static;
+  }
   .pipeline-steps {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -767,14 +851,6 @@ footer b {
   .card-coordinator-box {
     text-align: left;
     width: 100%;
-  }
-  .about-section {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
-  .principles-list {
-    border-left: 0;
-    padding-left: 0;
   }
 }
 
