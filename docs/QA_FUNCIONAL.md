@@ -1,35 +1,23 @@
-# Checklist de QA funcional
+# Checklist de QA Funcional: IMPLANTA
 
-## Navegação e liberdade de exploração
+## Navegacao e Interatividade
 
-- [x] As seis visões são acessíveis pelo menu principal.
-- [x] O visitante pode entrar pelo modo livre ou pelo roteiro guiado.
-- [x] O roteiro pode ser fechado, retomado e reiniciado.
-- [x] Gate crítico não bloqueia a navegação.
-- [x] Existe restauração geral com confirmação.
-- [x] Existe restauração individual no detalhe da implantação.
+- [x] O cockpit centralizado carrega instantaneamente sem erros de renderizacao.
+- [x] O seletor de iniciativas permite alternar fluidamente entre as 4 organizacoes comunitarias.
+- [x] O rastreador de fases (Pipeline Tracker) reflete corretamente a etapa ativa e a conclusao de cada iniciativa.
+- [x] O modal de Status Report Executivo abre com dados formatados e fecha ao clicar no botao ou no backdrop.
+- [x] A secao "Sobre o Implanta" exibe com clareza os pilares metodologicos e as 4 fases do modelo.
 
-## Consistência operacional
+## Integridade Operacional
 
-- [x] Condição operacional é derivada das mesmas regras em dashboard, carteira e detalhe.
-- [x] Requisitos mantêm vínculo com pacote e testes.
-- [x] QA interno e UAT permanecem separados.
-- [x] Mudanças de escopo preservam classificação e impacto.
-- [x] Dependências preservam origem e responsável.
-- [x] Ciclo operacional validado é diferente de go-live.
-- [x] Transição para Customer Success considera o ciclo validado e as pendências residuais.
-- [x] Capacidade da carteira é classificada por regras observáveis.
+- [x] Cada iniciativa exibe seu percentual de conclusao e badge de saude operacional coerente (Atencao, No Prazo, Concluido).
+- [x] O card de diagnostico de bloqueio aparece exclusivamente quando a iniciativa possui um impedimento ativo (ex: Quitanda da Terra).
+- [x] A matriz de prontidao operacional (Readiness) agrupa os requisitos essenciais com status visuais claros (Concluido, Em Andamento, Bloqueado).
+- [x] Os planos de acao identificam causa raiz, impacto no cronograma, acao corretiva, responsavel e prazo de conclusao.
 
-## Persistência e recuperação
+## Validacao Tecnica
 
-- [x] Alterações do visitante são mantidas em armazenamento local.
-- [x] Uma nova implantação pode ser criada sem autenticação.
-- [x] Projetos demonstrativos podem ser restaurados individualmente.
-- [x] A restauração geral remove projetos criados pelo visitante e recompõe os oito cenários iniciais.
-
-## Validação técnica
-
-- [x] Compilação TypeScript aprovada.
-- [x] Build de produção aprovado.
-- [x] 22 testes automatizados aprovados.
-- [x] Nove testes de estresse documentados e reproduzíveis.
+- [x] Compilacao TypeScript estrita aprovada sem warnings ou erros (`tsc -b`).
+- [x] Build de producao Vite executado com sucesso (`npm run build`).
+- [x] Ausencia total de caracteres proibidos (zero em-dashes ou tracos duplos).
+- [x] Responsividade validada para telas desktop, tablets e smartphones.

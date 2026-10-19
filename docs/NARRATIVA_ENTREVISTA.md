@@ -1,58 +1,26 @@
-# Narrativa para entrevista — IMPLANTA
+# Narrativa para Entrevista: IMPLANTA
 
-## Versão curta
+## Versao Resumida (Elevator Pitch)
 
-“O IMPLANTA é um protótipo de gestão de implantações de software que acompanha a jornada do handoff comercial até o primeiro ciclo operacional validado. Eu parti de um problema que conheço da operação: o projeto pode avançar entre várias áreas e até entrar em produção sem existir uma visão integrada de requisitos, bloqueios, responsabilidades e operação comprovada.
+"O IMPLANTA e um cockpit de gestao executiva para implantacao e emancipacao de negocios de impacto comunitario e empreendedorismo social. Ele resolve um problema critico que vivenciei na gestao de projetos: muitas iniciativas sociais recebem recursos para inauguracao e oficinas, mas nao consolidam requisitos de operacao, canais comerciais ou governanca, correndo alto risco de descontinuidade.
 
-Modelei nove fases, criei oito cenários simulados e conectei dashboard, DRN, QA, homologação, mudanças de escopo e portal do cliente. Uma decisão importante foi não usar um percentual único de progresso. O projeto mostra fase, condição operacional, cobertura de requisitos, marcos e gates.
+Modelei um pipeline em quatro fases: Diagnostico & Modelagem, Estruturacao & Capacitacao, Piloto Operacional e Autonomia Sustentavel. Cada iniciativa possui uma matriz clara de prontidao operacional (Readiness), alem de diagnosticos especificos para pontos de bloqueio (como licencas sanitarias ou logistica de frio na agricultura familiar) e geracao de Status Report em um clique para investidores e liderancas.
 
-Depois submeti o modelo a nove testes de estresse. Três revelaram lacunas e me fizeram incluir classificação de capacidade, rastreabilidade de divergências comerciais e transição parcial para Customer Success. O resultado é um protótipo navegável e testável que demonstra como eu organizo processos complexos, trato exceções e transformo aprendizados em melhoria do modelo.”
+O resultado e uma ferramenta transparente, centrada no usuario e focada em processos, demonstrando minha habilidade em transformar complexidade operacional e impacto social em solucoes estruturadas e mensuraveis."
 
-## Estrutura para aprofundar
+## Estrutura STAR para Aprofundamento
 
-### Situação
-
-Informações de uma implantação ficam distribuídas entre documentos, planilhas, ferramentas técnicas e conversas. Isso dificulta enxergar condição real, responsáveis, riscos e valor para o cliente.
+### Situacao
+Iniciativas comunitarias e negocios de impacto social enfrentam altas taxas de inatividade apos o termino de editais ou aportes pontuais, por falta de visibilidade sobre prontidao operacional e maturidade de gestao.
 
 ### Tarefa
+Desenvolver uma solucao visual e gerencial que permita a coordenadores de projetos, PMOs e investidores sociais monitorar o avanco real das implantacoes, antecipar riscos e orientar acoes de sustentabilidade.
 
-Criar um modelo que integrasse a jornada sem simplificar indevidamente o processo e sem entregar decisões críticas a uma automação.
-
-### Ação
-
-- defini os critérios do ciclo operacional antes de desenhar as telas;
-- modelei fases, gates, exceções e responsabilidades;
-- conectei necessidade, requisito, entrega, teste e homologação;
-- criei cenários com riscos de origens diferentes;
-- desenvolvi demonstração guiada sem bloquear a exploração;
-- executei testes de estresse e corrigi as lacunas encontradas.
+### Acao
+* Estruturacao de um pipeline de implantacao de quatro etapas com criterios objetivos de avanco.
+* Construcao de cenarios reais baseados em economia circular, agricultura sustentavel, extrativismo e juventude criativa.
+* Criacao de componentes dedicados a diagnostico de impedimentos com planos de acao (causa raiz, impacto, acao corretiva, responsavel e prazo).
+* Emissao automatizada de relatorio de status executivo no cockpit.
 
 ### Resultado
-
-Uma aplicação com seis visões, oito projetos simulados, três roteiros guiados e 22 testes automatizados. O case conecta Operações, Projetos e Customer Success e mostra evolução em relação ao Prioriza.
-
-## Perguntas prováveis
-
-### Por que não usar um percentual de progresso?
-
-Porque percentuais podem misturar entregas de relevâncias diferentes. Um projeto com muitas tarefas simples concluídas ainda pode ter um requisito fiscal crítico em aberto. Preferi combinar fase, cobertura de requisitos, marcos e gates.
-
-### Por que separar go-live de ciclo operacional validado?
-
-Porque colocar o sistema em produção não garante que o cliente conseguiu operar com sucesso. A validação operacional exige venda, estoque, caixa e dados reconciliados no ciclo real.
-
-### A plataforma toma decisões automaticamente?
-
-Não. Ela aplica regras para sinalizar riscos e impedir um avanço operacional incoerente no cenário, mas mantém validação e justificativa humanas. A navegação do visitante nunca é bloqueada.
-
-### O que os testes mudaram?
-
-Os testes revelaram que o modelo inicial não tratava bem capacidade da carteira, divergência originada no comercial e transição parcial para CS. Esses pontos foram modelados, implementados e documentados.
-
-### Qual é a relação com sua experiência?
-
-O projeto traduz uma vivência de acompanhamento simultâneo de implantações entre discovery, requisitos, desenvolvimento, testes e homologação. Ele transforma essa experiência em um modelo operacional reproduzível e testável.
-
-### Como o IMPLANTA complementa o Prioriza?
-
-O Prioriza trata a entrada, análise e priorização de demandas. O IMPLANTA avança para a gestão de uma jornada mais longa, com dependências entre áreas, controle de escopo, gates de qualidade e comprovação de valor ao cliente.
+Uma interface intuitiva, rapida e responsiva, que conecta gestao de projetos, engenharia de processos e impacto comunitario com governanca solida.

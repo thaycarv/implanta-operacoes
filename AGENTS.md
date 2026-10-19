@@ -1,5 +1,5 @@
 # 🤖 Diretrizes de Governança e Contribuição com IA (AGENTS.md)
-**Repositório**: `Implanta: Gestão de Implantação Orientada a Valor`  
+**Repositório**: `Implanta: Gestão de Implantação em Empreendedorismo Social`  
 **Responsável**: Thayâne Carvalho (Gestão de Projetos & Implantação)
 
 ---
@@ -15,7 +15,7 @@ Toda e qualquer evolução técnica, correção ou melhoria deve seguir estritam
 
 Nenhuma alteração de código ou funcionalidade deve ser realizada sem uma **Issue** correspondente previamente criada e categorizada:
 
-1. **`[Correção]`** *(Bugfix)*: Resolução de falhas de renderização, quebras de jornada, inconsistências em gates de go-live ou erros de script.
+1. **`[Correção]`** *(Bugfix)*: Resolução de falhas de renderização, quebras de jornada, inconsistências em matrizes de prontidão ou erros de script.
 2. **`[Melhoria]`** *(Enhancement)*: Refinamento de usabilidade, aprimoramento de contraste/temas, clareza metodológica ou otimização de performance.
 3. **`[Nova Função]`** *(Feature)*: Criação de novos módulos, novas etapas de implantação ou integração com relatórios de status.
 
@@ -44,7 +44,7 @@ Todo Pull Request aberto deve conter obrigatoriamente as seguintes 4 seções de
 - Descrição clara, técnica e objetiva das alterações realizadas no código ou na arquitetura.
 
 ### ✅ Como foi validado?
-- Comandos de build ou testes executados.
+- Comandos de build ou testes executados (ex: `npm run build`).
 - Validações visuais nos temas e responsividade.
 - Testes de usabilidade e integridade funcional realizados.
 
@@ -57,6 +57,6 @@ Todo Pull Request aberto deve conter obrigatoriamente as seguintes 4 seções de
 ---
 
 ## 4. 🛡️ Critérios de Aceite & Governança Ética
-* **Rastreabilidade de Requisitos**: Manter a consistência entre o escopo contratado (DRN) e os testes de homologação (UAT/QA).
-* **Critérios Determinísticos de Go-Live**: Gates de liberação só devem ser aprovados quando os requisitos de qualidade forem validados.
-* **Foco em Processos**: Diagnósticos de bloqueio devem orientar soluções técnicas e operacionais de forma construtiva.
+* **Aderência Metodológica**: Manter a consistência entre o ciclo de implantação em 4 fases e as matrizes de prontidão (Readiness).
+* **Foco em Processos e Resolução Construtiva**: Diagnósticos de bloqueio devem orientar soluções técnicas e operacionais para planos de ação, sem responsabilizações punitivas.
+* **Integridade Textual**: Proibição estrita do uso de travessões ou traços duplos em qualquer documentação, commit ou interface.
