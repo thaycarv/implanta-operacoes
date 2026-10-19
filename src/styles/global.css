@@ -1,18 +1,21 @@
 :root {
-  --bg: #f8faf9;
+  --bg: #fcfaf8;
   --card: #ffffff;
-  --ink: #112620;
-  --muted: #4b6159;
-  --line: #e2e8e4;
-  --green: #059669;
-  --green-hover: #047857;
-  --green-subtle: #ecfdf5;
-  --amber: #d97706;
+  --ink: #2b1d17;
+  --muted: #6b554c;
+  --line: #ede4dc;
+  --brand: #c2410c;
+  --brand-hover: #9a3412;
+  --brand-subtle: #fff7ed;
+  --green: #15803d;
+  --green-hover: #166534;
+  --green-subtle: #f0fdf4;
+  --amber: #b45309;
   --amber-subtle: #fffbeb;
   --blue: #2563eb;
   --blue-subtle: #eff6ff;
   --radius: 12px;
-  --shadow: 0 4px 16px rgba(15, 31, 27, 0.05);
+  --shadow: 0 4px 16px rgba(43, 29, 23, 0.06);
 }
 
 * {
@@ -52,7 +55,7 @@ body {
 .mark {
   width: 32px;
   height: 32px;
-  background: var(--green);
+  background: var(--brand);
   color: #ffffff;
   border-radius: 8px;
   display: grid;
@@ -80,11 +83,11 @@ body {
 .topbar-tag span {
   font-size: 11px;
   font-weight: 700;
-  background: var(--green-subtle);
-  color: var(--green);
+  background: var(--brand-subtle);
+  color: var(--brand);
   padding: 4px 10px;
   border-radius: 999px;
-  border: 1px solid #c7f3de;
+  border: 1px solid #fed7aa;
 }
 
 /* Workspace Amplo em Tela Cheia com Barra Lateral */
@@ -104,7 +107,7 @@ body {
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.12em;
-  color: var(--green);
+  color: var(--brand);
   text-transform: uppercase;
   margin: 0 0 6px;
 }
@@ -162,17 +165,17 @@ body {
 }
 
 .initiative-btn:hover {
-  border-color: #9eb5aa;
+  border-color: #d6b8a8;
   background: #ffffff;
   transform: translateY(-1px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 10px rgba(43, 29, 23, 0.04);
 }
 
 .initiative-btn.active {
   background: var(--ink);
   border-color: var(--ink);
   color: #ffffff;
-  box-shadow: 0 6px 16px rgba(17, 38, 32, 0.16);
+  box-shadow: 0 6px 16px rgba(43, 29, 23, 0.18);
 }
 
 .initiative-btn.active .initiative-name {
@@ -180,15 +183,15 @@ body {
 }
 
 .initiative-btn.active .initiative-segment {
-  color: #a3c2b4;
+  color: #fed7aa;
 }
 
 .initiative-btn.active .meta-beneficiaries {
-  color: #cfe1d8;
+  color: #ffedd5;
 }
 
 .initiative-btn.active .meta-progress {
-  background: rgba(255, 255, 255, 0.18);
+  background: var(--brand);
   color: #ffffff;
 }
 
@@ -219,7 +222,7 @@ body {
   align-items: center;
   margin-top: 4px;
   padding-top: 8px;
-  border-top: 1px dashed rgba(0, 0, 0, 0.08);
+  border-top: 1px dashed rgba(43, 29, 23, 0.08);
 }
 
 .initiative-btn.active .sidebar-btn-meta {
@@ -234,8 +237,8 @@ body {
 .meta-progress {
   font-size: 10.5px;
   font-weight: 700;
-  background: #eef5f1;
-  color: var(--green);
+  background: var(--brand-subtle);
+  color: var(--brand);
   padding: 2px 7px;
   border-radius: 999px;
 }
@@ -268,8 +271,8 @@ body {
 }
 
 .pill-completed {
-  background: #dbeafe;
-  color: #1d4ed8;
+  background: #ffedd5;
+  color: #c2410c;
 }
 
 /* Esteira Visual de Fases (Pipeline) */
@@ -302,9 +305,9 @@ body {
 }
 
 .pipeline-progress-badge {
-  background: var(--green-subtle);
-  border: 1px solid #b7ecd3;
-  color: var(--green);
+  background: var(--brand-subtle);
+  border: 1px solid #fed7aa;
+  color: var(--brand);
   padding: 4px 10px;
   border-radius: 999px;
   font-size: 12px;
@@ -313,7 +316,7 @@ body {
 .progress-bar-bg {
   width: 100%;
   height: 6px;
-  background: #e7ede9;
+  background: #f3eae3;
   border-radius: 999px;
   overflow: hidden;
   margin-bottom: 18px;
@@ -321,7 +324,7 @@ body {
 
 .progress-bar-fill {
   height: 100%;
-  background: linear-gradient(90deg, #10b981, #059669);
+  background: linear-gradient(90deg, #ea580c, #c2410c);
   transition: width 0.3s ease;
 }
 
@@ -361,13 +364,13 @@ body {
 }
 
 .step-current .step-marker {
-  background: var(--green);
+  background: var(--brand);
   color: #ffffff;
-  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.2);
+  box-shadow: 0 0 0 3px rgba(194, 65, 12, 0.2);
 }
 
 .step-done .step-marker {
-  background: #10b981;
+  background: var(--green);
   color: #ffffff;
 }
 
@@ -646,13 +649,13 @@ body {
 
 .advance-btn.ready,
 .primary {
-  background: var(--green);
+  background: var(--brand);
   color: #ffffff;
 }
 
 .advance-btn.ready:hover,
 .primary:hover {
-  background: var(--green-hover);
+  background: var(--brand-hover);
 }
 
 .advance-btn.secondary,
