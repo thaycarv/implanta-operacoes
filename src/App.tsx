@@ -4,7 +4,6 @@ import { Header } from './components/Header';
 import { InitiativeSelector } from './components/InitiativeSelector';
 import { PipelineTracker } from './components/PipelineTracker';
 import { InitiativeCard } from './components/InitiativeCard';
-import { AboutSection } from './components/AboutSection';
 import { Footer } from './components/Footer';
 import { StatusReportModal } from './components/StatusReportModal';
 import { PhaseId, SocialInitiative } from './types';
@@ -98,9 +97,6 @@ export function App() {
           onAdvancePhase={handleAdvancePhase}
           onOpenReport={() => setIsReportModalOpen(true)}
         />
-
-        {/* Diretrizes e Princípios de Gestão de Negócios de Impacto */}
-        <AboutSection />
       </main>
 
       {/* Rodapé Centralizado */}
