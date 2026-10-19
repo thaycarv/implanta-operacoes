@@ -13,13 +13,14 @@ export const InitiativeSelector: React.FC<InitiativeSelectorProps> = ({
   onSelect,
 }) => {
   return (
-    <div className="selector-container">
-      <div className="selector-label">
-        <p className="eyebrow">CARTEIRA DE EMPREENDIMENTOS SOCIAIS</p>
-        <h2>Acompanhamento da Esteira de Implantação</h2>
+    <aside className="initiative-sidebar">
+      <div className="sidebar-header">
+        <p className="eyebrow">CARTEIRA ATIVA</p>
+        <h3 className="sidebar-title">Empreendimentos Sociais</h3>
+        <p className="sidebar-subtitle">Selecione uma iniciativa para acompanhar a esteira e os requisitos operacionais.</p>
       </div>
 
-      <div className="selector-buttons">
+      <nav className="sidebar-list" aria-label="Lista de Iniciativas">
         {initiatives.map((item) => {
           const isSelected = item.id === selectedId;
           return (
@@ -34,11 +35,15 @@ export const InitiativeSelector: React.FC<InitiativeSelectorProps> = ({
                   {item.statusLabel}
                 </span>
               </div>
-              <small className="initiative-segment">{item.segment}</small>
+              <p className="initiative-segment">{item.segment}</p>
+              <div className="sidebar-btn-meta">
+                <span className="meta-beneficiaries">👥 {item.beneficiariesCount} pessoas</span>
+                <span className="meta-progress">{item.progressPercentage}%</span>
+              </div>
             </button>
           );
         })}
-      </div>
-    </div>
+      </nav>
+    </aside>
   );
 };
