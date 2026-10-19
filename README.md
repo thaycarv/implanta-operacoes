@@ -1,66 +1,78 @@
-# Implanta • Gestão de Implantações e Transformação Digital
+# Implanta: Gestao de Implantacoes em Empreendedorismo Social
 
-O **Implanta** é um cockpit executivo desenvolvido para acompanhar a jornada completa de implantação de projetos em **educação, transformação digital e inovação**. 
+O **Implanta** e um cockpit executivo desenvolvido para acompanhar a jornada completa de estruturacao, operacionalizacao e sustentabilidade de **iniciativas de empreendedorismo social e negocios de impacto comunitario**.
 
-O projeto organiza a transição entre o planejamento inicial e a adoção prática no dia a dia, garantindo que novas tecnologias e metodologias não fiquem apenas instaladas, mas gerem valor real para educadores, equipes e gestores.
-
----
-
-## 🎯 O Desafio das Implantações em Transformação Digital
-A modernização de processos e a introdução de novas ferramentas em redes de ensino, polos de inovação e instituições frequentemente enfrentam gargalos silenciosos:
-* Informações críticas dispersas entre cronogramas paralelos e controles individuais;
-* Falta de visibilidade sobre onde cada equipe ou unidade está travada;
-* Viradas de chave realizadas com pendências técnicas que comprometem a experiência dos usuários;
-* Foco restrito à entrega técnica da ferramenta, sem acompanhamento da adesão das pessoas no primeiro ciclo de uso.
+O projeto organiza a transicao entre o diagnostico territorial e a autonomia de operacao das comunidades, garantindo que capacitacoes tecnicas, canais de comercializacao, infraestrutura produtiva e governanca gerem impacto socioeconomico real e sustentavel.
 
 ---
 
-## 🗺️ A Jornada Estruturada em Etapas
-O fluxo de implantação organiza o ciclo de vida do projeto em etapas integradas com critérios claros de entrada e saída:
+## O Desafio das Implantacoes em Negocios de Impacto
 
-1. **Alinhamento Inicial:** Definição de escopo, expectativas e marcos de entrega com os responsáveis;
-2. **Diagnóstico e Discovery:** Mapeamento do contexto local, infraestrutura e maturidade digital;
-3. **Desenho da Solução:** Estruturação dos requisitos pedagógicos, técnicos e operacionais;
-4. **Configuração e Integração:** Parametrização de ambientes, migração de dados e testes preliminares;
-5. **Capacitação e Homologação:** Formação das equipes líderes, simulação de rotinas e validação de usabilidade;
-6. **Preparação para o Lançamento:** Verificação de pré-requisitos essenciais e plano de comunicação;
-7. **Primeiro Ciclo de Uso e Sustentação:** Acompanhamento assistido das primeiras semanas de operação real e transição para suporte contínuo.
+A transformacao de talentos e materias-primas locais em empreendimentos sustentaveis enfrenta gargalos estruturais e operacionais:
+* Falta de visibilidade integrada sobre onde cada coletivo ou cooperativa esta travado;
+* Dificuldade em adequar padroes sanitarios e fiscais sem descaracterizar a cultura tradicional;
+* Riscos de descontinuidade no encerramento de patrocinios iniciais se canais comerciais nao estiverem consolidados;
+* Dependencia de insumos e maquinas em rotas logisticas vulneraveis.
 
 ---
 
-## 💡 Recursos Principais
-* **Dashboard da Carteira:** Visão consolidada de todas as unidades e projetos em andamento, com semáforos de saúde e alertas de atraso;
-* **Diagnóstico de Bloqueios:** Identificação rápida da causa raiz dos travamentos (infraestrutura, dados, capacitação ou alinhamento de lideranças);
-* **Status Report Executivo:** Emissão em um clique de relatórios de acompanhamento para comitês e patrocinadores;
-* **Critérios Determinísticos de Liberação:** O avanço para a etapa seguinte só ocorre quando os requisitos essenciais são validados, evitando surpresas no lançamento.
+## O Pipeline Estruturado em 4 Fases
+
+O ciclo de implantacao organiza a jornada em etapas com criterios claros de readiness e saida:
+
+1. **Fase 1: Diagnostico & Modelagem:** Mapeamento de potenciais locais, cadeia de valor e alinhamento de governanca comunitaria;
+2. **Fase 2: Estruturacao & Capacitacao:** Adequacao de espacos, compra de maquinario, trilha de formacao tecnica e gestao de recursos;
+3. **Fase 3: Piloto Operacional & Mercados:** Testes de producao, primeiros ciclos de comercializacao e obtencao de certificacoes;
+4. **Fase 4: Autonomia & Sustentabilidade:** Consolidacao comercial, governanca autonoma, fundo de reserva e relatorios de impacto.
 
 ---
 
-## 🏫 Cenários Demonstrativos na Carteira
-A plataforma conta com projetos simulados refletindo desafios reais de transformação:
-* **Colégio Horizonte:** Implantação de plataforma de gestão pedagógica com bloqueio temporário em integração de dados acadêmicos;
-* **Polo Inova Edu:** Formação de multiplicadores e salas digitais em fase avançada de homologação com professores;
-* **Rede Saber Digital:** Primeiro ciclo de uso concluído com sucesso e transição para equipe de sustentação.
+## Recursos Principais do Cockpit
+
+* **Painel da Carteira de Iniciativas:** Visao centralizada das organizacoes comunitarias atendidas com diagnostico de saude em tempo real;
+* **Pipeline Interativo:** Navegacao por etapas de implantacao com percentual de conclusao e marcadores visuais;
+* **Diagnostico de Bloqueios e Plano de Acao:** Detalhamento da causa raiz de impedimentos operacionais e acoes corretivas com responsaveis e prazos;
+* **Matriz de Prontidao Operacional (Readiness):** Acompanhamento do status de cada requisito essencial (concluido, em andamento, pendente ou bloqueado);
+* **Status Report Executivo:** Emissao instantanea de relatorio formatado para conselhos, investidores sociais e liderancas comunitarias.
 
 ---
 
-## 🛠️ Estrutura Técnica & Execução
+## Iniciativas Demonstrativas no Portfolio
+
+* **Coletivo Tecendo Autonomia (Fase 3 - Piloto Operacional):**
+  * *Setor:* Moda Sustentavel & Costura Comunitaria
+  * *Status:* 72% concluido. Treinamento concluido e primeira colecao-capsula em producao.
+* **Quitanda da Terra (Fase 2 - Estruturacao & Capacitacao):**
+  * *Setor:* Alimentos Saudaveis & Agricultura Familiar
+  * *Status:* 45% concluido. Bloqueio pontual em licenca sanitaria e calibracao de camara fria, com plano de acao em andamento.
+* **BioSaberes da Floresta (Fase 4 - Autonomia & Sustentabilidade):**
+  * *Setor:* Biocosmeticos & Extrativismo Sustentavel
+  * *Status:* 94% concluido. Fundo de reserva estruturado e vendas ativas em e-commerce colaborativo.
+* **Estudio Jovem Criativo (Concluido):**
+  * *Setor:* Design, Serigrafia & Economia Criativa
+  * *Status:* 100% concluido. Cooperativa formalizada com 100% de autonomia e 18 jovens gerando renda ativa.
+
+---
+
+## Estrutura Tecnica & Execucao
+
 * **Frontend:** React, TypeScript, Vite
-* **Design & Estilo:** CSS modular, Motion Principles com física spring e micro-interações
-* **Governança:** GitFlow com Issues, Branches e Pull Requests (conforme `AGENTS.md`)
+* **Design & Estilo:** CSS modular responsivo, tipografia com contraste acessivel e cockpit centralizado
+* **Governanca:** GitFlow rigoroso com Issues, Branches e Pull Requests (conforme `AGENTS.md`)
 
 ```bash
-# Instalar dependências
+# Instalar dependencias
 npm install
 
 # Iniciar servidor local
 npm run dev
 
-# Gerar build de produção
+# Gerar build de producao
 npm run build
 ```
 
 ---
 
-## 👩‍💼 Competências Aplicadas
-Gestão de Projetos e Implantação • Transformação Digital e Inovação • Gestão de Mudança e Adoção • Diagnóstico de Bloqueios e Riscos • Facilitação e Status Report Executivo
+## Competencias Aplicadas
+
+Gestao de Projetos e Implantacao • Empreendedorismo Social e Negocios de Impacto • Diagnostico Operacional e Resolucao de Bloqueios • Governanca Comunitaria e Sustentabilidade • Status Report Executivo

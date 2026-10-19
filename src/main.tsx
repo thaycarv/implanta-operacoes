@@ -1,17 +1,10 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { HashRouter } from 'react-router-dom'
-import { App } from './App'
-import { PortfolioProvider } from './state/PortfolioContext'
-import './styles/global.css'
-import './styles/stress.css'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { App } from './App';
+import './styles/global.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <HashRouter>
-      <PortfolioProvider>
-        <App />
-      </PortfolioProvider>
-    </HashRouter>
+    <App />
   </StrictMode>,
-)
+);

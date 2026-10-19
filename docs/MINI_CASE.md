@@ -1,55 +1,33 @@
-# Mini case — IMPLANTA
+# Mini case: IMPLANTA em Negocios de Impacto e Empreendedorismo Social
 
 ## Contexto
 
-Em operações de implantação de software, o andamento do projeto pode parecer saudável porque tarefas foram concluídas ou o sistema entrou em produção. Entretanto, requisitos, evidências, bloqueios e responsabilidades permanecem fragmentados, e o valor para o cliente ainda pode não ter sido comprovado.
+Em projetos de estruturacao de empreendimentos sociais e cooperativas comunitarias, o avanco frequentemente e medido apenas pelo repasse financeiro de editais ou pela conclusao de oficinas pontuais. Entretanto, requisitos criticos de viabilidade operacional, regularizacao sanitaria, logistica e comercializacao permanecem fragmentados, colocando em risco a continuidade dos negocios apos o termino dos aportes iniciais.
 
 ## Problema
 
-Como oferecer uma visão integrada da implantação sem transformar um processo complexo em um percentual pouco confiável ou automatizar decisões que exigem análise humana?
+Como oferecer uma visao executiva e integrada do ciclo de implantacao de negocios de impacto comunitarios, permitindo que gestores de projetos, investidores sociais e liderancas locais identifiquem bloqueios e garantam sustentabilidade antes da emancipacao do projeto?
 
-## Hipótese
+## Hipotese
 
-Uma plataforma que conecte fase, condição operacional, dependências, requisitos, testes, marcos e ciclo operacional validado pode melhorar a qualidade do acompanhamento e tornar decisões de avanço mais rastreáveis.
+Um cockpit centralizado que estruture a jornada em quatro fases claras (Diagnostico, Estruturacao, Piloto Operacional e Autonomia Sustentavel), acompanhado de uma matriz de prontidao operacional (Readiness) e planos de acao para bloqueios, torna as decisoes de avanco mais transparentes e reduz drasticamente a taxa de mortalidade dos empreendimentos sociais.
 
-## Solução prototipada
+## Solucao Prototipada
 
-Foi desenvolvido o IMPLANTA, protótipo navegável para gestão de implantações de ERP no varejo. A solução acompanha nove fases, do handoff comercial à transição para Customer Success, e apresenta visões específicas para gestão, implantação e cliente.
+Foi desenvolvido o IMPLANTA, um cockpit executivo para gestao e acompanhamento de implantacoes em empreendedorismo social. O sistema apresenta:
 
-O sistema deriva alertas e gates a partir de regras explícitas, mas mantém a decisão sob responsabilidade humana. Uma falha crítica pode impedir o avanço operacional simulado, sem bloquear a exploração do protótipo.
+1. **Jornada em 4 Fases Integradas:** do alinhamento inicial a autonomia comunitaria completa.
+2. **Matriz de Prontidao Operacional (Readiness):** acompanhamento minucioso de infraestrutura, capacitacao, governanca e mercado.
+3. **Diagnostico de Bloqueios Operacionais:** detalhamento de causas raizes, impacto no cronograma e plano de acao corretivo com responsaveis definidos.
+4. **Status Report Executivo Automatizado:** gerador de relatorio consolidado para prestacao de contas e comites gestores.
 
-## Processo de desenvolvimento
+## Principais Decisoes de Design e Gestao
 
-1. Definição do problema e dos critérios de validação operacional.
-2. Modelagem da jornada e das responsabilidades.
-3. Definição de criticidade, exceções e regras de avanço.
-4. Construção de oito cenários simulados.
-5. Desenvolvimento de seis visões conectadas.
-6. Combinação de demonstração guiada e exploração livre.
-7. Execução de nove testes de estresse.
-8. Revisão do modelo a partir das falhas encontradas.
-
-## Principais decisões
-
-- Substituição do percentual único por múltiplas evidências de progresso.
-- Separação entre QA interno e homologação do cliente.
-- Distinção entre defeito, divergência, mudança de escopo, melhoria futura e configuração pendente.
-- Separação entre go-live e ciclo operacional validado.
-- Transição parcial para CS quando existem apenas pendências não críticas com responsáveis definidos.
-- Classificação do esforço de coordenação por características do projeto.
-
-## Testes e aprendizados
-
-Os testes de estresse não serviram apenas para confirmar a solução. Eles revelaram três lacunas:
-
-- ausência de uma leitura de capacidade operacional;
-- pouca visibilidade para divergências originadas no handoff comercial;
-- falta de regra para transição parcial a Customer Success.
-
-As três lacunas foram incorporadas ao produto e protegidas por testes automatizados.
+* Substituicao de cronogramas estaticos por uma visao dinamica de prontidao operacional.
+* Destaque transparente para bloqueios operacionais (ex: pendencias sanitarias da agricultura familiar) com planos de mitigacao claros.
+* Foco na sustentabilidade economica e autonomia, evitando dependencia perpetua de subsidios.
+* Interface centralizada em um cockpit unico, intuitivo e com alta acessibilidade visual.
 
 ## Resultado
 
-O protótipo final possui oito implantações simuladas, três roteiros guiados, seis visões navegáveis, restauração de cenários, persistência local e 22 testes automatizados.
-
-Mais do que demonstrar uma interface, o case evidencia capacidade de estruturar problemas, modelar processos, tratar exceções, testar hipóteses e comunicar decisões entre Operações, Projetos e Customer Success.
+O prototipo conta com quatro iniciativas completas simulando desafios reais (Moda Sustentavel, Agricultura Familiar, Biocosmeticos e Economia Criativa), demonstrando solida capacidade de estruturacao de processos, gestao de riscos territoriais e comunicacao executiva orientada a resultados sociais.
