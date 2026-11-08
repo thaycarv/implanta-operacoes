@@ -1,34 +1,33 @@
-# Catálogo de Melhorias: Implanta
+# Catálogo de Auditoria e Melhorias: Implanta (Operações de Impacto Social)
 
-Este documento cataloga as evoluções realizadas no **Implanta**, organizando as melhorias em termos de usabilidade, visão operacional integrada e arquitetura.
+Este documento registra as auditorias e intervenções realizadas no **Implanta**, sob a ótica de **Engenharia de Produção (Operações e Qualidade)** e **Recrutamento Tech/ESG**, eliminando alucinações de IA, simplificando regras de negócio e alinhando o protótipo à realidade técnica brasileira.
 
 ---
 
-## 1. Comparativo entre Versões
+## 1. Eliminação de Alucinações de IA & Saneamento de Escopo
 
-| Aspecto | Versão 1.0 | Versão 2.0 | Benefício Operacional |
+| Item Auditado | Diagnóstico Anterior (Vício de IA) | Correção Aplicada | Ganho Operacional & Defesa em Entrevista |
 | :--- | :--- | :--- | :--- |
-| **Navegação** | Telas separadas com troca constante de contexto e seleção repetitiva de projetos. | Visão unificada por implantação com abas integradas (Visão Geral, Requisitos, Testes, Mudanças e Portal). | Agilidade na consulta e visão 360 graus do projeto em uma única página. |
-| **Diagnóstico Operacional** | Informações de bloqueios e causas de atraso dispersas entre múltiplas telas. | Card de Diagnóstico Operacional consolidando causas raízes, fatos e pontos de atenção. | Identificação imediata do motivo de travamento da implantação. |
-| **Comunicação e Reporte** | Sem recurso para extração rápida de status para clientes ou liderança. | Botão para copiar Status Report Executivo formatado em um clique. | Rapidez para alimentar reuniões de diretoria, atas com clientes ou canais de comunicação. |
-| **Navegação entre Cenários** | Tour guiado em caixas sobrepostas. | Seletor rápido de cenários em destaque no topo da página. | Facilidade para alternar e demonstrar tensões operacionais distintas. |
-| **Linguagem e Tom** | Termos com formatações e travessões variados. | Comunicação equilibrada, corporativa e sem travessões. | Padronização e profissionalismo em toda a experiência. |
+| **Escopo Narrativo (`MELHORIAS.md`)** | Texto herdado de protótipo de onboarding varejista citando *"Rede Aurora"*, *"Lojas Horizonte"*, *"DRN"* e *"QA/UAT"*. | Documento 100% reescrito focado na esteira real de maturação e incubação de negócios sociais. | Elimina risco de contradição vexatória caso um entrevistador consulte a documentação técnica. |
+| **Gargalo Técnico da Quitanda da Terra** | Texto genérico ("apoio para calcular margem e validade"). | Ancoragem técnica direta na **RDC nº 727/2022 da Anvisa** (rotulagem e alergenicidade) e **ficha técnica de custo por batelada**. | Conecta o projeto ao perfil híbrido real da candidata (Eng. de Produção + Nutricionista). |
+| **Cálculo de Progresso da Esteira** | Fórmula com pesos artificiais e números divergentes entre tela e checklist (45% pulando para 38%). | **Regra Invariante dos 4 Portões:** Cada marco objetivo cumprido equivale a exatamente 25% (2 de 4 = 50%, 3 de 4 = 75%, 4 de 4 = 100%). | 100% transparente e explicável em 30 segundos, sem fórmulas opacas. |
+| **Identidade Visual (Anti-Claude Code)** | Emojis avulsos (`📍`, `👥`, `⏱`, `📋`, `✓`) e visual genérico de template de IA. | Substituição por ícones vetoriais SVG da biblioteca **Lucide React**, paleta terracota/verde-folha e tipografia editorial. | Acabamento de produto corporativo de alto padrão, sem cara de template descartável gerado por LLM. |
 
 ---
 
-## 2. Detalhamento das Alterações
+## 2. A Esteira Operacional dos 4 Portões de Prontidão (Readiness Gates)
 
-1. **Card de Diagnóstico Operacional Integrado:**
-   * Apresenta de forma imediata a causa raiz do bloqueio (exemplo: divergência de caixa na Rede Aurora ou falha fiscal na Lojas Horizonte).
-   * Lista fatos e indicadores confirmados separadamente de pontos de atenção e riscos.
-   * Sugere a próxima ação operacional recomendada para a coordenação.
+O ciclo de vida de cada empreendimento social é governado por 4 portões objetivos de liberação:
 
-2. **Status Report Executivo:**
-   * Exporta em um clique um relatório estruturado com data, fase, condição, diagnóstico, pontos de atenção e pendências abertas.
+1. **Portão 01 — Diagnóstico & Modelagem (25%):** Mapeamento territorial, vocação produtiva local e definição do mix de produtos comunitários.
+2. **Portão 02 — Capacitação & Custos (50%):** Estruturação da ficha técnica de custo de batelada, controle de fluxo de caixa e padronização sanitária de processos.
+3. **Portão 03 — Embalagem & Canais (75%):** Identidade visual, conformidade de rotulagem conforme a RDC 727/2022 da Anvisa e abertura de canais B2B/B2C.
+4. **Portão 04 — Lançamento Oficial (100%):** Go-live comercial, feiras de economia solidária, vendas ativas e consolidação da autonomia do grupo.
 
-3. **Abas Integradas no Detalhe da Implantação:**
-   * **Visão Geral e Ciclo:** Linha do tempo, esforço de coordenação, validação do ciclo operacional e pendências.
-   * **Requisitos e DRN:** Rastreabilidade completa da necessidade ao critério de aceite.
-   * **Testes QA e UAT:** Gestão de casos de teste internos e homologação com o cliente, com gate de go-live.
-   * **Mudanças de Escopo:** Registro e fluxo de aprovação de alterações sem perder a linha de base.
-   * **Portal do Cliente:** Prévia da visão simplificada compartilhada com o cliente.
+---
+
+## 3. Ancoragem Técnica & Referências Reais Validadas
+
+* **Norma Sanitária:** Resolução da Diretoria Colegiada **RDC nº 727/2022 da Anvisa**, que estabelece os requisitos para rotulagem de alimentos embalados, declaração de rotulagem nutricional obrigatória, data de validade e alertas de alergênicos.
+* **Metodologia de Custos:** Engenharia de Processos com ficha técnica unitária por batelada produtiva (*batch costing*), rateio de custos fixos de pequenos ateliês/cozinhas e margem comunitária reinvestível.
+* **Governança Comunitária:** Aplicação de critérios de autossustentabilidade inspirados nos manuais de aceleração de negócios sociais (Artemisia, Instituto Quintessa e GIFE).

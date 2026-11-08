@@ -1,5 +1,14 @@
 import React from 'react';
 import { SocialInitiative } from '../types';
+import {
+  MapPin,
+  Users,
+  Clock,
+  AlertTriangle,
+  FileText,
+  CheckCircle2,
+  ArrowRight,
+} from 'lucide-react';
 
 interface InitiativeCardProps {
   initiative: SocialInitiative;
@@ -22,9 +31,13 @@ export const InitiativeCard: React.FC<InitiativeCardProps> = ({
       <div className="card-header">
         <div>
           <div className="initiative-meta-tags">
-            <span className="meta-tag community-tag">📍 {initiative.community}</span>
+            <span className="meta-tag community-tag">
+              <MapPin className="meta-icon" aria-hidden="true" />
+              {initiative.community}
+            </span>
             <span className="meta-tag beneficiaries-tag">
-              👥 {initiative.beneficiariesCount} pessoas/famílias atendidas
+              <Users className="meta-icon" aria-hidden="true" />
+              {initiative.beneficiariesCount} pessoas/famílias atendidas
             </span>
           </div>
           <h3 className="card-title">{initiative.name}</h3>
@@ -34,7 +47,10 @@ export const InitiativeCard: React.FC<InitiativeCardProps> = ({
         <div className="card-coordinator-box">
           <small>COORDENAÇÃO LOCAL</small>
           <b>{initiative.coordinator}</b>
-          <span className="target-date">⏱ Previsão: {initiative.targetGoLiveDate}</span>
+          <span className="target-date">
+            <Clock className="meta-icon" aria-hidden="true" />
+            Previsão: {initiative.targetGoLiveDate}
+          </span>
         </div>
       </div>
 
@@ -42,7 +58,10 @@ export const InitiativeCard: React.FC<InitiativeCardProps> = ({
       {initiative.bottleneck && (
         <div className="bottleneck-card">
           <div className="bottleneck-header">
-            <span className="bottleneck-badge">PONTO DE ATENÇÃO OPERACIONAL</span>
+            <span className="bottleneck-badge">
+              <AlertTriangle className="bottleneck-icon" aria-hidden="true" />
+              PONTO DE ATENÇÃO OPERACIONAL
+            </span>
             <small>Responsável: {initiative.bottleneck.responsible}</small>
           </div>
           <h4>{initiative.bottleneck.title}</h4>
@@ -59,7 +78,7 @@ export const InitiativeCard: React.FC<InitiativeCardProps> = ({
         <div className="checklist-header">
           <div>
             <b>Checklist de Prontidão & Critérios de Liberação</b>
-            <small>Itens mandatórios para validar o avanço na esteira</small>
+            <small>Itens mandatórios para validar o avanço na esteira (25% por portão concluído)</small>
           </div>
           <span className="checklist-counter">
             {initiative.readinessChecklist.filter((i) => i.completed).length} de{' '}
@@ -94,11 +113,19 @@ export const InitiativeCard: React.FC<InitiativeCardProps> = ({
           onClick={onAdvancePhase}
           className={`advance-btn ${allCompleted ? 'ready' : 'secondary'}`}
         >
-          {initiative.status === 'completed'
-            ? '✓ Iniciativa Consolidada com Autonomia'
-            : allCompleted
-            ? 'Avançar para Próxima Etapa →'
-            : 'Validar Critérios Pendentes'}
+          {initiative.status === 'completed' ? (
+            <>
+              <CheckCircle2 className="btn-icon" aria-hidden="true" />
+              Iniciativa Consolidada com Autonomia
+            </>
+          ) : allCompleted ? (
+            <>
+              Avançar para Próxima Etapa
+              <ArrowRight className="btn-icon" aria-hidden="true" />
+            </>
+          ) : (
+            'Validar Critérios Pendentes'
+          )}
         </button>
 
         <button
@@ -107,7 +134,8 @@ export const InitiativeCard: React.FC<InitiativeCardProps> = ({
           className="report-btn"
           title="Visualizar e copiar status report para investidores"
         >
-          📋 Copiar Status Report
+          <FileText className="btn-icon" aria-hidden="true" />
+          Copiar Status Report
         </button>
       </div>
     </div>

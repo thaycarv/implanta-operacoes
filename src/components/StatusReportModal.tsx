@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { SocialInitiative } from '../types';
 import { PHASES } from '../data/socialData';
+import { FileText, X, Check, Copy } from 'lucide-react';
 
 interface StatusReportModalProps {
   isOpen: boolean;
@@ -18,7 +19,6 @@ export const StatusReportModal: React.FC<StatusReportModalProps> = ({
   if (!isOpen) return null;
 
   const currentPhaseInfo = PHASES.find((p) => p.id === initiative.currentPhase);
-  const completedChecklist = initiative.readinessChecklist.filter((i) => i.completed);
 
   const reportText = `*Status Report Executivo: Implanta (Empreendedorismo Social)*
 Iniciativa: ${initiative.name}
@@ -58,15 +58,18 @@ ${initiative.purpose}
   };
 
   return (
-    <div className="modal-overlay" onClick={onClose}>
+    <div className="modal-overlay" onClick={onClose} role="dialog" aria-modal="true">
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
           <div>
-            <h3>📋 Status Report Executivo</h3>
+            <h3 className="modal-title">
+              <FileText className="modal-title-icon" aria-hidden="true" />
+              Status Report Executivo
+            </h3>
             <small>Relatório pronto para envio a conselhos, comitês e investidores de impacto</small>
           </div>
-          <button className="modal-close" onClick={onClose}>
-            ✕
+          <button className="modal-close" onClick={onClose} aria-label="Fechar modal">
+            <X className="modal-close-icon" aria-hidden="true" />
           </button>
         </div>
 
@@ -82,7 +85,17 @@ ${initiative.purpose}
             Fechar
           </button>
           <button className="primary" onClick={handleCopy}>
-            {copied ? '✓ Copiado com sucesso!' : 'Copiar Relatório'}
+            {copied ? (
+              <>
+                <Check className="btn-icon" aria-hidden="true" />
+                Copiado com sucesso!
+              </>
+            ) : (
+              <>
+                <Copy className="btn-icon" aria-hidden="true" />
+                Copiar Relatório
+              </>
+            )}
           </button>
         </div>
       </div>

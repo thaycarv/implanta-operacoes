@@ -1,91 +1,68 @@
-# Implanta: Gestao de Implantacoes em Empreendedorismo Social
+# Implanta: Gestão de Implantação em Empreendedorismo Social
 
-> **Aplicacao Online:** [https://thaycarv.github.io/implanta-operacoes/](https://thaycarv.github.io/implanta-operacoes/)
+> **Aplicação Online:** [https://thaycarv.github.io/implanta-operacoes/](https://thaycarv.github.io/implanta-operacoes/)  
+> **Autora & Coordenação:** Thayâne Carvalho (Engenharia de Produção & Nutrição)
 
-O **Implanta** e um cockpit executivo desenvolvido para acompanhar a jornada completa de estruturacao, operacionalizacao e sustentabilidade de **iniciativas de empreendedorismo social e negocios de impacto comunitario**.
+O **Implanta** é um cockpit executivo desenvolvido para acompanhar a jornada completa de estruturação, prontidão operacional e autossustentabilidade de **iniciativas de empreendedorismo social e negócios de impacto comunitário**.
 
-O projeto organiza a transicao entre o diagnostico territorial e a autonomia de operacao das comunidades, garantindo que capacitacoes tecnicas, canais de comercializacao, infraestrutura produtiva e governanca gerem impacto socioeconomico real e sustentavel.
+O projeto organiza a transição entre o diagnóstico territorial e a autonomia dos grupos produtivos, garantindo que capacitações técnicas, conformidade sanitária e regulatória, precificação de custos e canais comerciais gerem impacto socioeconômico sustentável.
 
 ---
 
-## Acesso Rapido & Demonstracao Online
+## Acesso Rápido & Demonstração Online
 
 Acesse o cockpit interativo diretamente pelo navegador:
 * **Link Direto:** [https://thaycarv.github.io/implanta-operacoes/](https://thaycarv.github.io/implanta-operacoes/)
-* **Navegacao:** selecione qualquer uma das quatro iniciativas comunitarias na barra lateral para carregar sua esteira de fases, matriz de prontidao operacional e diagnostico de bloqueios em tempo real.
+* **Navegação:** selecione qualquer uma das quatro iniciativas comunitárias na barra lateral para carregar sua esteira de fases, matriz de prontidão operacional (Readiness Gates) e diagnóstico de bloqueios em tempo real.
 
 ---
 
-## O Desafio das Implantacoes em Negocios de Impacto
+## O Pipeline Estruturado nos 4 Portões de Prontidão (Readiness Gates)
 
-A transformacao de talentos e materias-primas locais em empreendimentos sustentaveis enfrenta gargalos estruturais e operacionais:
-* Falta de visibilidade integrada sobre onde cada coletivo ou cooperativa esta travado;
-* Dificuldade em adequar padroes sanitarios e fiscais sem descaracterizar a cultura tradicional;
-* Riscos de descontinuidade no encerramento de patrocinios iniciais se canais comerciais nao estiverem consolidados;
-* Dependencia de insumos e maquinas em rotas logisticas vulneraveis.
+O ciclo de maturação é governado por 4 portões objetivos de liberação (cada portão equivale a exatamente 25% de progresso):
 
----
-
-## O Pipeline Estruturado em 4 Fases
-
-O ciclo de implantacao organiza a jornada em etapas com criterios claros de readiness e saida:
-
-1. **Fase 1: Diagnostico & Modelagem:** Mapeamento de potenciais locais, cadeia de valor e alinhamento de governanca comunitaria;
-2. **Fase 2: Estruturacao & Capacitacao:** Adequacao de espacos, compra de maquinario, trilha de formacao tecnica e gestao de recursos;
-3. **Fase 3: Piloto Operacional & Mercados:** Testes de producao, primeiros ciclos de comercializacao e obtencao de certificacoes;
-4. **Fase 4: Autonomia & Sustentabilidade:** Consolidacao comercial, governanca autonoma, fundo de reserva e relatorios de impacto.
+1. **Portão 01 — Diagnóstico & Modelagem (25%):** Mapeamento de potenciais locais, vocação produtiva e desenho do produto comunitário;
+2. **Portão 02 — Capacitação & Custos (50%):** Estruturação da ficha técnica de custo por batelada de produção, controle de fluxo de caixa e padronização produtiva;
+3. **Portão 03 — Embalagem & Canais (75%):** Identidade visual, conformidade de rotulagem e tabela nutricional (**RDC nº 727/2022 da Anvisa**) e abertura de canais B2B/B2C;
+4. **Portão 04 — Lançamento Oficial (100%):** Go-live comercial, feiras de economia solidária, vendas recorrentes e consolidação da autonomia do grupo.
 
 ---
 
-## Recursos Principais do Cockpit
+## Carteira Ativa de Iniciativas
 
-* **Barra Lateral de Iniciativas (Widescreen):** Acesso imediato as organizacoes comunitarias com badges de status, contagem de beneficiarios e percentual de avanco;
-* **Esteira Visual Interativa:** Rastreamento visual por etapas de maturacao com barra de progresso dinamica;
-* **Diagnostico de Bloqueios e Plano de Acao:** Detalhamento da causa raiz de impedimentos operacionais e acoes corretivas com responsaveis e prazos;
-* **Matriz de Prontidao Operacional (Readiness Checklist):** Checklist interativo com requisitos essenciais de qualidade e homologacao de cada fase;
-* **Status Report Executivo:** Emissao em um clique de relatorio consolidado para conselhos, investidores sociais e liderancas locais.
-
----
-
-## Iniciativas Demonstrativas no Portfolio
-
-* **Coletivo Tecendo Autonomia (Fase 3: Embalagem & Canais):**
-  * *Setor:* Moda Sustentavel & Costura Comunitaria
-  * *Status:* No Prazo (75% concluido). Atelie montado e contratos de fornecimento B2B em negociacao.
-* **Quitanda da Terra (Fase 2: Capacitacao & Custos):**
-  * *Setor:* Alimentos Saudaveis & Agricultura Familiar
-  * *Status:* Ponto de Atencao (45% concluido). Bloqueio operacional em rotulagem e precificacao de geleias, com oficina tecnica presencial programada.
-* **BioSaberes da Floresta (Fase 4: Lancamento Oficial):**
-  * *Setor:* Biocosmeticos & Extrativismo Sustentavel
-  * *Status:* No Prazo (90% concluido). Formulas homologadas e preparacao para ativacao de feiras e encomendas.
-* **Estudio Jovem Criativo (Concluido):**
+* **Coletivo Tecendo Autonomia (Portão 03: Embalagem & Canais):**
+  * *Setor:* Moda Sustentável & Costura Comunitária
+  * *Status:* No Prazo (75% concluído — 3 de 4 portões validados). Ateliê montado e contratos de fornecimento B2B em negociação.
+* **Quitanda da Terra (Portão 02: Capacitação & Custos):**
+  * *Setor:* Alimentos Saudáveis & Agricultura Familiar
+  * *Status:* Ponto de Atenção (50% concluído — 2 de 4 portões validados).
+  * *Gargalo Operacional:* Adequação de rótulos segundo a **RDC nº 727/2022 da Anvisa** e cálculo da ficha técnica de custo de batelada das geleias artesanais.
+  * *Responsável:* Thayâne Carvalho (Eng. de Produção & Nutricionista).
+* **BioSaberes da Floresta (Portão 04: Lançamento Oficial):**
+  * *Setor:* Biocosméticos & Extrativismo Sustentável
+  * *Status:* No Prazo (75% concluído — 3 de 4 portões validados). Fórmulas artesanais homologadas e preparação para feira regional.
+* **Estúdio Jovem Criativo (Concluído & Autossustentável):**
   * *Setor:* Design, Serigrafia & Economia Criativa
-  * *Status:* Autossustentavel (100% concluido). Cooperativa formalizada com geracao de renda ativa e fundo de reinvestimento em funcionamento.
+  * *Status:* Autossustentável (100% concluído — 4 de 4 portões validados). Cooperativa formalizada com 8 clientes regulares ativos e fundo de reinvestimento comunitário.
 
 ---
 
-## Estrutura Tecnica & Execucao
+## Stack Técnica
 
-* **Frontend:** React, TypeScript, Vite
-* **Design & Estilo:** CSS modular em grid widescreen responsivo, tipografia de alto contraste e sem dependencias pesadas
-* **Governanca:** GitFlow rigoroso com Issues, Branches e Pull Requests (conforme `AGENTS.md`)
+* **Frontend:** React 18, TypeScript, Vite
+* **Ícones & UI:** Lucide React (ícones vetoriais SVG sem emojis avulsos), tipografia editorial sóbria e layout em grid responsivo
+* **Testes & Qualidade:** Vitest com cobertura de invariantes e validação de regras de negócio
 
 ```bash
-# Instalar dependencias
+# Instalar dependências
 npm install
 
 # Iniciar servidor local
 npm run dev
 
-# Executar testes unitarios
+# Executar testes unitários
 npm test -- --run
 
-# Gerar build de producao
+# Gerar build de produção
 npm run build
 ```
-
----
-
-## Competencias Aplicadas
-
-Gestao de Projetos e Implantacao • Empreendedorismo Social e Negocios de Impacto • Diagnostico Operacional e Resolucao de Bloqueios • Governanca Comunitaria e Sustentabilidade • Status Report Executivo

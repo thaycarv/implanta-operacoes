@@ -1,5 +1,6 @@
 import React from 'react';
 import { SocialInitiative } from '../types';
+import { Users } from 'lucide-react';
 
 interface InitiativeSelectorProps {
   initiatives: SocialInitiative[];
@@ -37,7 +38,10 @@ export const InitiativeSelector: React.FC<InitiativeSelectorProps> = ({
               </div>
               <p className="initiative-segment">{item.segment}</p>
               <div className="sidebar-btn-meta">
-                <span className="meta-beneficiaries">👥 {item.beneficiariesCount} pessoas</span>
+                <span className="meta-beneficiaries">
+                  <Users className="meta-icon" aria-hidden="true" />
+                  {item.beneficiariesCount} pessoas
+                </span>
                 <span className="meta-progress">{item.progressPercentage}%</span>
               </div>
             </button>

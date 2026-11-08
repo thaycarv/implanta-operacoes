@@ -1,6 +1,7 @@
 import React from 'react';
 import { PHASES } from '../data/socialData';
 import { PhaseId } from '../types';
+import { Check } from 'lucide-react';
 
 interface PipelineTrackerProps {
   currentPhase: PhaseId;
@@ -18,7 +19,7 @@ export const PipelineTracker: React.FC<PipelineTrackerProps> = ({
       <div className="pipeline-header">
         <div>
           <span className="pipeline-title">Esteira de Maturação do Negócio Social</span>
-          <small>4 Etapas da Modelagem ao Lançamento Comercial</small>
+          <small>4 Etapas Objetivas da Modelagem ao Lançamento Comercial</small>
         </div>
         <div className="pipeline-progress-badge">
           <b>{progressPercentage}%</b> concluído
@@ -45,7 +46,7 @@ export const PipelineTracker: React.FC<PipelineTrackerProps> = ({
               }`}
             >
               <div className="step-marker">
-                {isDone ? '✓' : phase.number}
+                {isDone ? <Check className="marker-check" aria-hidden="true" /> : phase.number}
               </div>
               <div className="step-info">
                 <b>{phase.name}</b>

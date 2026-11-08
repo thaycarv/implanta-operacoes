@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { INITIAL_INITIATIVES, PHASES } from './data/socialData';
 import { Header } from './components/Header';
 import { InitiativeSelector } from './components/InitiativeSelector';
@@ -16,7 +16,7 @@ export function App() {
   const selectedInitiative =
     initiatives.find((i) => i.id === selectedId) || initiatives[0];
 
-  // Alternar item do checklist
+  // Alternar item do checklist com cálculo direto e transparente dos 4 gates
   const handleToggleChecklist = (itemId: string) => {
     setInitiatives((prev) =>
       prev.map((init) => {
@@ -26,18 +26,31 @@ export function App() {
           item.id === itemId ? { ...item, completed: !item.completed } : item
         );
 
-        // Recalcular progresso com base na fase e checklist
+        // Cada portão cumprido vale 25% (4 portões objetivos de prontidão = 100%)
         const completedCount = updatedChecklist.filter((i) => i.completed).length;
         const totalCount = updatedChecklist.length;
-        const phaseIndex = PHASES.findIndex((p) => p.id === init.currentPhase);
-        const basePercentage = phaseIndex * 25;
-        const phasePortion = totalCount > 0 ? (completedCount / totalCount) * 25 : 0;
-        const calculatedProgress = Math.min(100, Math.round(basePercentage + phasePortion));
+        const calculatedProgress = Math.round((completedCount / totalCount) * 100);
+
+        let newStatus = init.status;
+        let newStatusLabel = init.statusLabel;
+
+        if (calculatedProgress === 100) {
+          newStatus = 'completed';
+          newStatusLabel = 'Autossustentável';
+        } else if (init.bottleneck) {
+          newStatus = 'attention';
+          newStatusLabel = 'Ponto de Atenção';
+        } else {
+          newStatus = 'on_track';
+          newStatusLabel = 'No Prazo';
+        }
 
         return {
           ...init,
           readinessChecklist: updatedChecklist,
           progressPercentage: calculatedProgress,
+          status: newStatus,
+          statusLabel: newStatusLabel,
         };
       })
     );
@@ -56,9 +69,8 @@ export function App() {
           return {
             ...init,
             currentPhase: nextPhase as PhaseId,
-            status: 'on_track' as const,
-            statusLabel: 'No Prazo',
-            bottleneck: undefined,
+            status: init.bottleneck ? ('attention' as const) : ('on_track' as const),
+            statusLabel: init.bottleneck ? 'Ponto de Atenção' : 'No Prazo',
           };
         } else {
           return {
