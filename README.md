@@ -21,10 +21,10 @@ Acesse o cockpit interativo diretamente pelo navegador:
 
 O ciclo de maturação é governado por 4 portões objetivos de liberação (cada portão equivale a exatamente 25% de progresso):
 
-1. **Portão 01 — Diagnóstico & Modelagem (25%):** Mapeamento de potenciais locais, vocação produtiva e desenho do produto comunitário;
-2. **Portão 02 — Capacitação & Custos (50%):** Estruturação da ficha técnica de custo por batelada de produção, controle de fluxo de caixa e padronização produtiva;
-3. **Portão 03 — Embalagem & Canais (75%):** Identidade visual, conformidade de rotulagem e tabela nutricional (**RDC nº 727/2022 da Anvisa**) e abertura de canais B2B/B2C;
-4. **Portão 04 — Lançamento Oficial (100%):** Go-live comercial, feiras de economia solidária, vendas recorrentes e consolidação da autonomia do grupo.
+1. **Portão 01: Diagnóstico & Modelagem (25%):** Mapeamento de potenciais locais, vocação produtiva e desenho do produto comunitário;
+2. **Portão 02: Capacitação & Custos (50%):** Estruturação da ficha técnica de custo por batelada de produção, controle de fluxo de caixa e padronização produtiva;
+3. **Portão 03: Embalagem & Canais (75%):** Identidade visual, conformidade de rotulagem e tabela nutricional (**RDC nº 727/2022 da Anvisa**) e abertura de canais B2B/B2C;
+4. **Portão 04: Lançamento Oficial (100%):** Go-live comercial, feiras de economia solidária, vendas recorrentes e consolidação da autonomia do grupo.
 
 ---
 
@@ -32,18 +32,18 @@ O ciclo de maturação é governado por 4 portões objetivos de liberação (cad
 
 * **Coletivo Tecendo Autonomia (Portão 03: Embalagem & Canais):**
   * *Setor:* Moda Sustentável & Costura Comunitária
-  * *Status:* No Prazo (75% concluído — 3 de 4 portões validados). Ateliê montado e contratos de fornecimento B2B em negociação.
+  * *Status:* No Prazo (75% concluído, 3 de 4 portões validados). Ateliê montado e contratos de fornecimento B2B em negociação.
 * **Quitanda da Terra (Portão 02: Capacitação & Custos):**
   * *Setor:* Alimentos Saudáveis & Agricultura Familiar
-  * *Status:* Ponto de Atenção (50% concluído — 2 de 4 portões validados).
+  * *Status:* Ponto de Atenção (50% concluído, 2 de 4 portões validados).
   * *Gargalo Operacional:* Adequação de rótulos segundo a **RDC nº 727/2022 da Anvisa** e cálculo da ficha técnica de custo de batelada das geleias artesanais.
   * *Responsável:* Thayâne Carvalho (Eng. de Produção & Nutricionista).
 * **BioSaberes da Floresta (Portão 04: Lançamento Oficial):**
   * *Setor:* Biocosméticos & Extrativismo Sustentável
-  * *Status:* No Prazo (75% concluído — 3 de 4 portões validados). Fórmulas artesanais homologadas e preparação para feira regional.
+  * *Status:* No Prazo (75% concluído, 3 de 4 portões validados). Fórmulas artesanais homologadas e preparação para feira regional.
 * **Estúdio Jovem Criativo (Concluído & Autossustentável):**
   * *Setor:* Design, Serigrafia & Economia Criativa
-  * *Status:* Autossustentável (100% concluído — 4 de 4 portões validados). Cooperativa formalizada com 8 clientes regulares ativos e fundo de reinvestimento comunitário.
+  * *Status:* Autossustentável (100% concluído, 4 de 4 portões validados). Cooperativa formalizada com 8 clientes regulares ativos e fundo de reinvestimento comunitário.
 
 ---
 

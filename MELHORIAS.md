@@ -19,10 +19,10 @@ Este documento registra as auditorias e intervenções realizadas no **Implanta*
 
 O ciclo de vida de cada empreendimento social é governado por 4 portões objetivos de liberação:
 
-1. **Portão 01 — Diagnóstico & Modelagem (25%):** Mapeamento territorial, vocação produtiva local e definição do mix de produtos comunitários.
-2. **Portão 02 — Capacitação & Custos (50%):** Estruturação da ficha técnica de custo de batelada, controle de fluxo de caixa e padronização sanitária de processos.
-3. **Portão 03 — Embalagem & Canais (75%):** Identidade visual, conformidade de rotulagem conforme a RDC 727/2022 da Anvisa e abertura de canais B2B/B2C.
-4. **Portão 04 — Lançamento Oficial (100%):** Go-live comercial, feiras de economia solidária, vendas ativas e consolidação da autonomia do grupo.
+1. **Portão 01: Diagnóstico & Modelagem (25%):** Mapeamento territorial, vocação produtiva local e definição do mix de produtos comunitários.
+2. **Portão 02: Capacitação & Custos (50%):** Estruturação da ficha técnica de custo de batelada, controle de fluxo de caixa e padronização sanitária de processos.
+3. **Portão 03: Embalagem & Canais (75%):** Identidade visual, conformidade de rotulagem conforme a RDC 727/2022 da Anvisa e abertura de canais B2B/B2C.
+4. **Portão 04: Lançamento Oficial (100%):** Go-live comercial, feiras de economia solidária, vendas ativas e consolidação da autonomia do grupo.
 
 ---
 
